@@ -2,7 +2,7 @@ import React from "react";
 
 const Main = (props) => {
   // eslint-disable-next-line react/prop-types
-  const {movieTitle, movieGenre, movieYear} = props;
+  const {title, genre, year} = props.movie;
 
   return (
     <div>
@@ -61,10 +61,10 @@ const Main = (props) => {
             </div>
 
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{movieTitle}</h2>
+              <h2 className="movie-card__title">{title}</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{movieGenre}</span>
-                <span className="movie-card__year">{movieYear}</span>
+                <span className="movie-card__genre">{genre}</span>
+                <span className="movie-card__year">{year}</span>
               </p>
 
               <div className="movie-card__buttons">
