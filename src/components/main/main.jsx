@@ -1,11 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import MovieCard from "../movieCard/movieCard.jsx";
 
 const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {title, genre, year} = props.movie;
 
-  // eslint-disable-next-line react/prop-types
   const movieCards = props.movieTitles.map((movieTitle, i) =>
     <MovieCard
       key={i}
@@ -158,6 +157,14 @@ const Main = (props) => {
       </div>
     </div>
   );
+};
+
+Main.propTypes = {
+  movie: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  movieTitles: PropTypes.array.isRequired,
 };
 
 export default Main;
