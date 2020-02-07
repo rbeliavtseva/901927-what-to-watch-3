@@ -6,6 +6,8 @@ const App = (props) => {
     <Main
       // eslint-disable-next-line react/prop-types
       movie={props.movie}
+      // eslint-disable-next-line react/prop-types
+      movieTitles={props.movieTitles}
     />
   );
 };
