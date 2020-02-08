@@ -9,6 +9,7 @@ const Main = (props) => {
     <MovieCard
       key={i}
       title={movieTitle}
+      className={`catalog__movies-card`}
     />
   );
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const MovieCard = (props) => {
   return (
-    <article className="small-movie-card catalog__movies-card">
+    <article className={`small-movie-card ` + props.className}>
       <div className="small-movie-card__image">
         <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={props.title} width="280" height="175" />
       </div>
