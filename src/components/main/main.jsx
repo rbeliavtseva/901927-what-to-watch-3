@@ -161,11 +161,12 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  movie: PropTypes.object.isRequired,
-  title: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  year: PropTypes.number.isRequired,
-  movieTitles: PropTypes.array.isRequired,
+  movie: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+  }).isRequired,
+  movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Main;

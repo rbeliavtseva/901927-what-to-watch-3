@@ -13,7 +13,7 @@ const App = (props) => {
 
 App.propTypes = {
   movie: PropTypes.object.isRequired,
-  movieTitles: PropTypes.array.isRequired
+  movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default App;
