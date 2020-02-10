@@ -9,6 +9,7 @@ it(`Render MovieCard`, () => {
   const tree = renderer
     .create(<MovieCard
       title={title}
+      onMovieCardTitleClick={()=>{}}
     />)
     .toJSON();
 

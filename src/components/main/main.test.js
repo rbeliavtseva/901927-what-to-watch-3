@@ -17,6 +17,7 @@ it(`Render Main`, () => {
     .create(<Main
       movie={movie}
       movieTitles={movieTitles}
+      onMovieCardTitleClick={() => {}}
     />)
     .toJSON();
 
