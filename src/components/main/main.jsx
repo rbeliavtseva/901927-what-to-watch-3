@@ -10,6 +10,7 @@ const Main = (props) => {
       key={i}
       title={movieTitle}
       className={`catalog__movies-card`}
+      onMovieCardTitleClick={props.onMovieCardTitleClick}
     />
   );
 
@@ -167,6 +168,7 @@ Main.propTypes = {
     year: PropTypes.number.isRequired,
   }).isRequired,
   movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onMovieCardTitleClick: PropTypes.func.isRequired
 };
 
 export default Main;
