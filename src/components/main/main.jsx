@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MovieList from "../movieList/movieList.jsx";
+import MoviesList from "../movieList/moviesList.jsx";
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
@@ -124,7 +124,7 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <MovieList
+          <MoviesList
             films={props.films}
             onMovieCardTitleClick={props.onMovieCardTitleClick}
           />
