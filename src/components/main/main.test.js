@@ -10,13 +10,39 @@ const movie = {
   year: 2009
 };
 
-const movieTitles = [`Joker`, `Once Upon a Time ...in Hollywood`, `Little Women`, `Marriage Story`];
+const films = [
+  {
+    title: `Fight Club`,
+    genre: `Thriller`,
+    year: 1999
+  },
+  {
+    title: `Pulp Fiction`,
+    genre: `Thriller`,
+    year: 1994
+  },
+  {
+    title: `The Godfather`,
+    genre: `Drama`,
+    year: 1972
+  },
+  {
+    title: `Back to the Future`,
+    genre: `Science Fiction`,
+    year: 1985
+  },
+  {
+    title: `The Pianist`,
+    genre: `Drama`,
+    year: 2002
+  }
+];
 
 it(`Render Main`, () => {
   const tree = renderer
     .create(<Main
       movie={movie}
-      movieTitles={movieTitles}
+      films={films}
       onMovieCardTitleClick={() => {}}
     />)
     .toJSON();

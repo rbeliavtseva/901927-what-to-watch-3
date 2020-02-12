@@ -3,12 +3,13 @@
 exports[`Render MovieCard 1`] = `
 <article
   className="small-movie-card undefined"
+  onMouseEnter={[Function]}
 >
   <div
     className="small-movie-card__image"
   >
     <img
-      alt="Fantastic Mr. Fox"
+      alt="Inception"
       height="175"
       src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
       width="280"
@@ -22,7 +23,7 @@ exports[`Render MovieCard 1`] = `
       className="small-movie-card__link"
       href="movie-page.html"
     >
-      Fantastic Mr. Fox
+      Inception
     </a>
   </h3>
 </article>

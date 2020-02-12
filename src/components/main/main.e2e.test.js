@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, {mount} from "enzyme";
+import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
 
@@ -10,7 +10,33 @@ const movie = {
   year: 2009
 };
 
-const movieTitles = [`Joker`, `Once Upon a Time ...in Hollywood`, `Little Women`, `Marriage Story`];
+const films = [
+  {
+    title: `Fight Club`,
+    genre: `Thriller`,
+    year: 1999
+  },
+  {
+    title: `Pulp Fiction`,
+    genre: `Thriller`,
+    year: 1994
+  },
+  {
+    title: `The Godfather`,
+    genre: `Drama`,
+    year: 1972
+  },
+  {
+    title: `Back to the Future`,
+    genre: `Science Fiction`,
+    year: 1985
+  },
+  {
+    title: `The Pianist`,
+    genre: `Drama`,
+    year: 2002
+  }
+];
 
 Enzyme.configure({
   adapter: new Adapter(),
@@ -19,10 +45,10 @@ Enzyme.configure({
 it(`Should movie card title be pressed`, () => {
   const onMovieCardTitleClick = jest.fn();
 
-  const main = mount(
+  const main = shallow(
       <Main
         movie={movie}
-        movieTitles={movieTitles}
+        films={films}
         onMovieCardTitleClick={onMovieCardTitleClick}
       />
   );
