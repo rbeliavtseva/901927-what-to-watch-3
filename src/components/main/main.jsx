@@ -5,7 +5,7 @@ import MovieCard from "../movieCard/movieCard.jsx";
 const Main = (props) => {
   const {title, genre, year} = props.movie;
 
-  const movieCards = props.movieTitles.map((movieTitle, i) =>
+  const movieCards = props.films.map((it) => it.title).map((movieTitle, i) =>
     <MovieCard
       key={i}
       title={movieTitle}
@@ -167,8 +167,8 @@ Main.propTypes = {
     genre: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired,
   }).isRequired,
-  movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  films: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Main;

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const MovieCard = ({title, className, onMovieCardTitleClick}) => {
+const MovieCard = ({title, className, onMovieCardTitleClick, onMovieCardHover}) => {
   return (
-    <article className={`small-movie-card ` + className}>
+    <article className={`small-movie-card ` + className} onMouseEnter={onMovieCardHover}>
       <div className="small-movie-card__image">
         <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={title} width="280" height="175" />
       </div>
@@ -17,7 +17,8 @@ const MovieCard = ({title, className, onMovieCardTitleClick}) => {
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  onMovieCardHover: PropTypes.func.isRequired
 };
 
 export default MovieCard;
