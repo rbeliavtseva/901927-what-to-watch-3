@@ -1,18 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MovieCard from "../movieCard/movieCard.jsx";
+import MovieList from "../movieList/movieList.jsx";
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
-
-  const movieCards = props.films.map((it) => it.title).map((movieTitle, i) =>
-    <MovieCard
-      key={i}
-      title={movieTitle}
-      className={`catalog__movies-card`}
-      onMovieCardTitleClick={props.onMovieCardTitleClick}
-    />
-  );
 
   return (
     <div>
@@ -133,9 +124,10 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {movieCards}
-          </div>
+          <MovieList
+            films={props.films}
+            onMovieCardTitleClick={props.onMovieCardTitleClick}
+          />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
