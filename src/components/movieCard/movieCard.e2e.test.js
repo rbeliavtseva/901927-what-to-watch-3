@@ -9,8 +9,8 @@ Enzyme.configure({
 
 const movie = {
   title: `Inception`,
-  genre: `Science Fiction`,
-  year: 2010
+  poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+  id: 25
 };
 
 const mockEvent = {

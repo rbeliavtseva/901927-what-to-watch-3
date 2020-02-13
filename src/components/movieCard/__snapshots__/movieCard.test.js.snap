@@ -11,6 +11,7 @@ exports[`Render MovieCard 1`] = `
     <img
       alt="Inception"
       height="175"
+      src="http://picsum.photos/300/150?r=0.19687764763120508"
       width="280"
     />
   </div>
