@@ -5,7 +5,7 @@ const MovieCard = ({movie, className, onMovieCardTitleClick, onMovieCardHover}) 
   return (
     <article className={`small-movie-card ` + className} onMouseEnter={() => onMovieCardHover(movie)}>
       <div className="small-movie-card__image">
-        <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={movie.title} width="280" height="175" />
+        <img src={movie.poster} alt={movie.title} width="280" height="175" />
       </div>
       <h3 className="small-movie-card__title" onClick={onMovieCardTitleClick}>
         <a className="small-movie-card__link" href="movie-page.html">{movie.title}</a>
@@ -17,8 +17,8 @@ const MovieCard = ({movie, className, onMovieCardTitleClick, onMovieCardHover}) 
 MovieCard.propTypes = {
   movie: PropTypes.exact({
     title: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired,
+    poster: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
   className: PropTypes.string,
   onMovieCardTitleClick: PropTypes.func.isRequired,

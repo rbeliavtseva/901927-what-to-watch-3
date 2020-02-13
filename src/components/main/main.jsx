@@ -161,7 +161,11 @@ Main.propTypes = {
     year: PropTypes.number.isRequired,
   }).isRequired,
   onMovieCardTitleClick: PropTypes.func.isRequired,
-  films: PropTypes.arrayOf(PropTypes.object).isRequired
+  films: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    key: PropTypes.number
+  })).isRequired,
 };
 
 export default Main;

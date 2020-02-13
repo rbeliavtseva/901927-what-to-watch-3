@@ -12,7 +12,6 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Fight Club"
         height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>
@@ -38,7 +37,6 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Pulp Fiction"
         height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>
@@ -64,7 +62,6 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="The Godfather"
         height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>
@@ -90,7 +87,6 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Back to the Future"
         height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>
@@ -116,7 +112,6 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="The Pianist"
         height="175"
-        src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
         width="280"
       />
     </div>

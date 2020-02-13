@@ -1,27 +1,27 @@
 export const films = [
   {
     title: `The Shawshank Redemption`,
-    genre: `Drama`,
-    year: 1994
+    poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+    id: 1
   },
   {
     title: `The Green Mile`,
-    genre: `Drama`,
-    year: 1999
+    poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+    id: 2
   },
   {
     title: `Forrest Gump`,
-    genre: `Drama`,
-    year: 1994
+    poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+    id: 3
   },
   {
     title: `Schindler's List`,
-    genre: `Drama`,
-    year: 1993
+    poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+    id: 4
   },
   {
     title: `Intouchables`,
-    genre: `Drama`,
-    year: 2011
+    poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+    id: 5
   }
 ];
