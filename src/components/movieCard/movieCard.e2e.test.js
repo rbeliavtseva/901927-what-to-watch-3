@@ -18,13 +18,12 @@ const mockEvent = {
 };
 
 it(`Hover on movie card should pass to the callback data-object from which this card was created`, () => {
-  const onMovieCardTitleClick = jest.fn();
   const onMovieCardHover = jest.fn();
 
   const movieCard = shallow(
       <MovieCard
         movie={movie}
-        onMovieCardTitleClick={onMovieCardTitleClick}
+        onMovieCardTitleClick={() => {}}
         onMovieCardHover={onMovieCardHover}
       />
   );
