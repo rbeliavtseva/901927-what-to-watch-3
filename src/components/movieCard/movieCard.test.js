@@ -5,7 +5,7 @@ import MovieCard from "./movieCard.jsx";
 // Mocks
 const movie = {
   title: `Inception`,
-  poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+  poster: `http://picsum.photos/id/1005/300/150`,
   id: 110
 };
 

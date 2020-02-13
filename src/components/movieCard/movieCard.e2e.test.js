@@ -9,7 +9,7 @@ Enzyme.configure({
 
 const movie = {
   title: `Inception`,
-  poster: `http://picsum.photos/300/150?r=${Math.random()}`,
+  poster: `http://picsum.photos/id/1019/300/150`,
   id: 25
 };
 

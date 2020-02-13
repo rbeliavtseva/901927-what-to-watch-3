@@ -12,7 +12,7 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Fight Club"
         height="175"
-        src="http://picsum.photos/300/150?r=0.9158237574584083"
+        src="http://picsum.photos/id/1010/300/150"
         width="280"
       />
     </div>
@@ -38,7 +38,7 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Pulp Fiction"
         height="175"
-        src="http://picsum.photos/300/150?r=0.036181068699629115"
+        src="http://picsum.photos/id/1011/300/150"
         width="280"
       />
     </div>
@@ -64,7 +64,7 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="The Godfather"
         height="175"
-        src="http://picsum.photos/300/150?r=0.38834366698846656"
+        src="http://picsum.photos/id/1012/300/150"
         width="280"
       />
     </div>
@@ -90,7 +90,7 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="Back to the Future"
         height="175"
-        src="http://picsum.photos/300/150?r=0.26415186022516113"
+        src="http://picsum.photos/id/1013/300/150"
         width="280"
       />
     </div>
@@ -116,7 +116,7 @@ exports[`Render MoviesList 1`] = `
       <img
         alt="The Pianist"
         height="175"
-        src="http://picsum.photos/300/150?r=0.3484221206525209"
+        src="http://picsum.photos/id/1014/300/150"
         width="280"
       />
     </div>

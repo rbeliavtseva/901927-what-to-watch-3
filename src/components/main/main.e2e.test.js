@@ -13,28 +13,28 @@ const movie = {
 const films = [
   {
     title: `Fight Club`,
-    genre: `Thriller`,
-    year: 1999
+    poster: `http://picsum.photos/id/1010/300/150`,
+    id: 19
   },
   {
     title: `Pulp Fiction`,
-    genre: `Thriller`,
-    year: 1994
+    poster: `http://picsum.photos/id/1011/300/150`,
+    id: 20
   },
   {
     title: `The Godfather`,
-    genre: `Drama`,
-    year: 1972
+    poster: `http://picsum.photos/id/1012/300/150`,
+    id: 21
   },
   {
     title: `Back to the Future`,
-    genre: `Science Fiction`,
-    year: 1985
+    poster: `http://picsum.photos/id/1013/300/150`,
+    id: 22
   },
   {
     title: `The Pianist`,
-    genre: `Drama`,
-    year: 2002
+    poster: `http://picsum.photos/id/1014/300/150`,
+    id: 23
   }
 ];
 

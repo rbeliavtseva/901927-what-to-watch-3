@@ -363,7 +363,7 @@ exports[`Render App 1`] = `
             <img
               alt="Fight Club"
               height="175"
-              src="http://picsum.photos/300/150?r=0.5256057705917954"
+              src="http://picsum.photos/id/1030/300/150"
               width="280"
             />
           </div>
@@ -389,7 +389,7 @@ exports[`Render App 1`] = `
             <img
               alt="Pulp Fiction"
               height="175"
-              src="http://picsum.photos/300/150?r=0.45256296629282144"
+              src="http://picsum.photos/id/1031/300/150"
               width="280"
             />
           </div>
@@ -415,7 +415,7 @@ exports[`Render App 1`] = `
             <img
               alt="The Godfather"
               height="175"
-              src="http://picsum.photos/300/150?r=0.6090597137370011"
+              src="http://picsum.photos/id/1032/300/150"
               width="280"
             />
           </div>
@@ -441,7 +441,7 @@ exports[`Render App 1`] = `
             <img
               alt="Back to the Future"
               height="175"
-              src="http://picsum.photos/300/150?r=0.8288037358240343"
+              src="http://picsum.photos/id/1033/300/150"
               width="280"
             />
           </div>
@@ -467,7 +467,7 @@ exports[`Render App 1`] = `
             <img
               alt="The Pianist"
               height="175"
-              src="http://picsum.photos/300/150?r=0.3306765000956513"
+              src="http://picsum.photos/id/1034/300/150"
               width="280"
             />
           </div>
