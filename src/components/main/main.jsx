@@ -125,6 +125,7 @@ const Main = (props) => {
           </ul>
 
           <MoviesList
+            className={`catalog__movies-list`}
             films={props.films}
             onMovieCardTitleClick={props.onMovieCardTitleClick}
           />
