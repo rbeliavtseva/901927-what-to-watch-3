@@ -8,7 +8,7 @@ const App = (props) => {
   return (
     <Main
       movie={props.movie}
-      movieTitles={props.movieTitles}
+      films={props.films}
       onMovieCardTitleClick={titleClickHandler}
     />
   );
@@ -16,7 +16,11 @@ const App = (props) => {
 
 App.propTypes = {
   movie: PropTypes.object.isRequired,
-  movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired
+  films: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    id: PropTypes.number
+  })).isRequired
 };
 
 export default App;

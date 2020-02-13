@@ -355,14 +355,15 @@ exports[`Render App 1`] = `
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseEnter={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Joker"
+              alt="Fight Club"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="http://picsum.photos/id/1030/300/150"
               width="280"
             />
           </div>
@@ -374,20 +375,21 @@ exports[`Render App 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Joker
+              Fight Club
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseEnter={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Once Upon a Time ...in Hollywood"
+              alt="Pulp Fiction"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="http://picsum.photos/id/1031/300/150"
               width="280"
             />
           </div>
@@ -399,20 +401,21 @@ exports[`Render App 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Once Upon a Time ...in Hollywood
+              Pulp Fiction
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseEnter={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Little Women"
+              alt="The Godfather"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="http://picsum.photos/id/1032/300/150"
               width="280"
             />
           </div>
@@ -424,20 +427,21 @@ exports[`Render App 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Little Women
+              The Godfather
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseEnter={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Marriage Story"
+              alt="Back to the Future"
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="http://picsum.photos/id/1033/300/150"
               width="280"
             />
           </div>
@@ -449,7 +453,33 @@ exports[`Render App 1`] = `
               className="small-movie-card__link"
               href="movie-page.html"
             >
-              Marriage Story
+              Back to the Future
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <img
+              alt="The Pianist"
+              height="175"
+              src="http://picsum.photos/id/1034/300/150"
+              width="280"
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+            onClick={[Function]}
+          >
+            <a
+              className="small-movie-card__link"
+              href="movie-page.html"
+            >
+              The Pianist
             </a>
           </h3>
         </article>

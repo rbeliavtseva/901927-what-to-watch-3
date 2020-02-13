@@ -1,18 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MovieCard from "../movieCard/movieCard.jsx";
+import MoviesList from "../moviesList/moviesList.jsx";
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
-
-  const movieCards = props.movieTitles.map((movieTitle, i) =>
-    <MovieCard
-      key={i}
-      title={movieTitle}
-      className={`catalog__movies-card`}
-      onMovieCardTitleClick={props.onMovieCardTitleClick}
-    />
-  );
 
   return (
     <div>
@@ -133,9 +124,11 @@ const Main = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {movieCards}
-          </div>
+          <MoviesList
+            className={`catalog__movies-list`}
+            films={props.films}
+            onMovieCardTitleClick={props.onMovieCardTitleClick}
+          />
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -167,8 +160,12 @@ Main.propTypes = {
     genre: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired,
   }).isRequired,
-  movieTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired
+  onMovieCardTitleClick: PropTypes.func.isRequired,
+  films: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    poster: PropTypes.string,
+    key: PropTypes.number
+  })).isRequired,
 };
 
 export default Main;
