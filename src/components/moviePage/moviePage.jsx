@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MoviePage = ({movieFullInfo}) => {
+  if (movieFullInfo === null) {
+    return (null);
+  }
+
   return (
     <section className="movie-card movie-card--full">
       <div className="movie-card__hero">
@@ -108,7 +112,7 @@ MoviePage.propTypes = {
     rating: PropTypes.number,
     ratingLevel: PropTypes.string,
     ratingCount: PropTypes.number
-  }).isRequired
+  })
 };
 
 export default MoviePage;

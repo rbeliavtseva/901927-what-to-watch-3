@@ -18,7 +18,7 @@ class MoviesList extends PureComponent {
   }
 
   render() {
-    const {films, onMovieCardClick, className} = this.props;
+    const {films, onMovieCardClick, className, movieFullInfo} = this.props;
 
     const movieCards = films.map((movie) =>
       <MovieCard
@@ -27,6 +27,7 @@ class MoviesList extends PureComponent {
         className={`catalog__movies-card`}
         onMovieCardClick={onMovieCardClick}
         onMovieCardHover={this.onMovieCardHoverHandler}
+        movieFullInfo={movieFullInfo}
       />
     );
 
@@ -45,7 +46,18 @@ MoviesList.propTypes = {
     id: PropTypes.number
   })).isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  movieFullInfo: PropTypes.shape({
+    title: PropTypes.string,
+    year: PropTypes.number,
+    genre: PropTypes.string,
+    director: PropTypes.string,
+    starring: PropTypes.arrayOf.string,
+    text: PropTypes.string,
+    rating: PropTypes.number,
+    ratingLevel: PropTypes.string,
+    ratingCount: PropTypes.number
+  }).isRequired
 };
 
 export default MoviesList;

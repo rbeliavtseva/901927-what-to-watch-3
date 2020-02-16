@@ -9,23 +9,24 @@ class App extends PureComponent {
     super(props);
 
     this.state = {
-      movieInfo: this.props.movieFullInfo
+      movieInfo: null
     };
 
     this.cardClickHandler = this.cardClickHandler.bind(this);
   }
 
-  cardClickHandler() {
-    this.setState({movieInfo: this.props.movieFullInfo});
+  cardClickHandler(movieFullInfo) {
+    this.setState({movieInfo: movieFullInfo});
   }
 
   _renderMain() {
-    const {movie, films} = this.props;
+    const {movie, films, movieFullInfo} = this.props;
     return (
       <Main
         movie={movie}
         films={films}
         onMovieCardClick={this.cardClickHandler}
+        movieFullInfo={movieFullInfo}
       />
     );
   }
