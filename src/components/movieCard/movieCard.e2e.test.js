@@ -23,7 +23,7 @@ it(`Hover on movie card should pass to the callback data-object from which this 
   const movieCard = shallow(
       <MovieCard
         movie={movie}
-        onMovieCardTitleClick={() => {}}
+        onMovieCardClick={() => {}}
         onMovieCardHover={onMovieCardHover}
       />
   );

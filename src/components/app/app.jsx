@@ -4,11 +4,19 @@ import Main from "../main/main.jsx";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import MoviePage from "../moviePage/moviePage.jsx";
 
-const titleClickHandler = () => {};
-
 class App extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      movieInfo: this.props.movieFullInfo
+    };
+
+    this.cardClickHandler = this.cardClickHandler.bind(this);
+  }
+
+  cardClickHandler() {
+    this.setState({movieInfo: this.props.movieFullInfo});
   }
 
   _renderMain() {
@@ -17,16 +25,15 @@ class App extends PureComponent {
       <Main
         movie={movie}
         films={films}
-        onMovieCardTitleClick={titleClickHandler}
+        onMovieCardClick={this.cardClickHandler}
       />
     );
   }
 
   _renderMoviePage() {
-    const {movieFullInfo} = this.props;
     return (
       <MoviePage
-        movieFullInfo={movieFullInfo}
+        movieFullInfo={this.state.movieInfo}
       />
     );
   }

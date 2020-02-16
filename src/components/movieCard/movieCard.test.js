@@ -14,7 +14,7 @@ it(`Render MovieCard`, () => {
     .create(<MovieCard
       movie={movie}
       onMovieCardHover={()=>{}}
-      onMovieCardTitleClick={()=>{}}
+      onMovieCardClick={()=>{}}
     />)
     .toJSON();
 

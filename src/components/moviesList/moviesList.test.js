@@ -36,7 +36,7 @@ it(`Render MoviesList`, () => {
     .create(<MoviesList
       films={films}
       onMovieCardHover={()=>{}}
-      onMovieCardTitleClick={()=>{}}
+      onMovieCardClick={()=>{}}
     />)
     .toJSON();
 
