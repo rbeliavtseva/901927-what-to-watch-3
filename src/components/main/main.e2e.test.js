@@ -42,14 +42,14 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should movie card title be pressed`, () => {
-  const onMovieCardTitleClick = jest.fn();
+it(`Should movie card be pressed`, () => {
+  const onMovieCardClick = jest.fn();
 
   const main = shallow(
       <Main
         movie={movie}
         films={films}
-        onMovieCardTitleClick={onMovieCardTitleClick}
+        onMovieCardClick={onMovieCardClick}
       />
   );
 
@@ -62,5 +62,5 @@ it(`Should movie card title be pressed`, () => {
     count++;
   });
 
-  expect(onMovieCardTitleClick.mock.calls.length).toBe(count);
+  expect(onMovieCardClick.mock.calls.length).toBe(count);
 });

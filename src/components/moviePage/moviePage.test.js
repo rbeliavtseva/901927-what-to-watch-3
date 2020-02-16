@@ -23,7 +23,7 @@ const movie = {
 it(`Render MoviePage`, () => {
   const tree = renderer
     .create(<MoviePage
-      movie={movie}
+      movieFullInfo={movie}
     />)
     .toJSON();
 

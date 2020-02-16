@@ -1,6 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import MovieCard from "./movieCard.jsx";
+import {BrowserRouter} from "react-router-dom";
 
 // Mocks
 const movie = {
@@ -11,11 +12,15 @@ const movie = {
 
 it(`Render MovieCard`, () => {
   const tree = renderer
-    .create(<MovieCard
-      movie={movie}
-      onMovieCardHover={()=>{}}
-      onMovieCardClick={()=>{}}
-    />)
+    .create(
+        <BrowserRouter>
+          <MovieCard
+            movie={movie}
+            onMovieCardHover={()=>{}}
+            onMovieCardClick={()=>{}}
+          />
+        </BrowserRouter>
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();

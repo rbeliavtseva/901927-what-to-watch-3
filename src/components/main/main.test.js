@@ -1,6 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
+import {BrowserRouter} from "react-router-dom";
 
 
 // Mocks
@@ -40,11 +41,15 @@ const films = [
 
 it(`Render Main`, () => {
   const tree = renderer
-    .create(<Main
-      movie={movie}
-      films={films}
-      onMovieCardTitleClick={() => {}}
-    />)
+    .create(
+        <BrowserRouter>
+          <Main
+            movie={movie}
+            films={films}
+            onMovieCardClick={() => {}}
+          />
+        </BrowserRouter>
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();
