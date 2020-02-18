@@ -61,7 +61,7 @@ const MoviePage = ({movieFullInfo}) => {
       <div className="movie-card__wrap movie-card__translate-top">
         <div className="movie-card__info">
           <div className="movie-card__poster movie-card__poster--big">
-            <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width="218" height="327" />
+            <img src={movieFullInfo.poster} alt="The Grand Budapest Hotel poster" width="218" height="327" />
           </div>
 
           <div className="movie-card__desc">
@@ -109,6 +109,7 @@ MoviePage.propTypes = {
     director: PropTypes.string,
     starring: PropTypes.arrayOf.string,
     text: PropTypes.string,
+    poster: PropTypes.string,
     rating: PropTypes.number,
     ratingLevel: PropTypes.string,
     ratingCount: PropTypes.number
