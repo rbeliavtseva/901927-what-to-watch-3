@@ -128,7 +128,6 @@ const Main = (props) => {
             className={`catalog__movies-list`}
             films={props.films}
             onMovieCardClick={props.onMovieCardClick}
-            movieFullInfo={props.movieFullInfo}
           />
 
           <div className="catalog__more">
@@ -166,18 +165,7 @@ Main.propTypes = {
     title: PropTypes.string,
     poster: PropTypes.string,
     key: PropTypes.number
-  })).isRequired,
-  movieFullInfo: PropTypes.shape({
-    title: PropTypes.string,
-    year: PropTypes.number,
-    genre: PropTypes.string,
-    director: PropTypes.string,
-    starring: PropTypes.arrayOf.string,
-    text: PropTypes.string,
-    rating: PropTypes.number,
-    ratingLevel: PropTypes.string,
-    ratingCount: PropTypes.number
-  }).isRequired
+  })).isRequired
 };
 
 export default Main;

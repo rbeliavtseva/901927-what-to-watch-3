@@ -15,18 +15,17 @@ class App extends PureComponent {
     this.cardClickHandler = this.cardClickHandler.bind(this);
   }
 
-  cardClickHandler(movieFullInfo) {
-    this.setState({movieInfo: movieFullInfo});
+  cardClickHandler(movieId) {
+    this.setState({movieInfo: this.props.filmsFullInfo.get(movieId)});
   }
 
   _renderMain() {
-    const {movie, films, movieFullInfo} = this.props;
+    const {movie, films} = this.props;
     return (
       <Main
         movie={movie}
         films={films}
         onMovieCardClick={this.cardClickHandler}
-        movieFullInfo={movieFullInfo}
       />
     );
   }
@@ -62,17 +61,7 @@ App.propTypes = {
     poster: PropTypes.string,
     id: PropTypes.number
   })).isRequired,
-  movieFullInfo: PropTypes.shape({
-    title: PropTypes.string,
-    year: PropTypes.number,
-    genre: PropTypes.string,
-    director: PropTypes.string,
-    starring: PropTypes.arrayOf.string,
-    text: PropTypes.string,
-    rating: PropTypes.number,
-    ratingLevel: PropTypes.string,
-    ratingCount: PropTypes.number
-  }).isRequired
+  filmsFullInfo: PropTypes.instanceOf(Map).isRequired
 };
 
 export default App;

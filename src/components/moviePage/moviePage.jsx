@@ -10,7 +10,7 @@ const MoviePage = ({movieFullInfo}) => {
     <section className="movie-card movie-card--full">
       <div className="movie-card__hero">
         <div className="movie-card__bg">
-          <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
+          <img src={movieFullInfo.backgroundPoster} alt={movieFullInfo.title} />
         </div>
 
         <h1 className="visually-hidden">WTW</h1>
@@ -61,7 +61,7 @@ const MoviePage = ({movieFullInfo}) => {
       <div className="movie-card__wrap movie-card__translate-top">
         <div className="movie-card__info">
           <div className="movie-card__poster movie-card__poster--big">
-            <img src={movieFullInfo.poster} alt="The Grand Budapest Hotel poster" width="218" height="327" />
+            <img src={movieFullInfo.poster} alt={movieFullInfo.title} width="218" height="327" />
           </div>
 
           <div className="movie-card__desc">
@@ -110,6 +110,7 @@ MoviePage.propTypes = {
     starring: PropTypes.arrayOf.string,
     text: PropTypes.string,
     poster: PropTypes.string,
+    backgroundPoster: PropTypes.string,
     rating: PropTypes.number,
     ratingLevel: PropTypes.string,
     ratingCount: PropTypes.number

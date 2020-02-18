@@ -2,16 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
-const MovieCard = ({movie, className, onMovieCardClick, onMovieCardHover, movieFullInfo}) => {
+const MovieCard = ({movie, className, onMovieCardClick, onMovieCardHover}) => {
   return (
     <article className={`small-movie-card ` + className} onMouseEnter={() => onMovieCardHover(movie)}>
       <Link to="/dev-film">
-        <div className="small-movie-card__image" onClick={() => onMovieCardClick(movieFullInfo)}>
+        <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
           <img src={movie.poster} alt={movie.title} width="280" height="175"/>
         </div>
       </Link>
 
-      <h3 className="small-movie-card__title" onClick={() => onMovieCardClick(movieFullInfo)}>
+      <h3 className="small-movie-card__title" onClick={() => onMovieCardClick(movie.id)}>
         <Link to="/dev-film" className="small-movie-card__link">{movie.title}</Link>
       </h3>
 
@@ -27,18 +27,7 @@ MovieCard.propTypes = {
   }).isRequired,
   className: PropTypes.string,
   onMovieCardClick: PropTypes.func.isRequired,
-  onMovieCardHover: PropTypes.func.isRequired,
-  movieFullInfo: PropTypes.shape({
-    title: PropTypes.string,
-    year: PropTypes.number,
-    genre: PropTypes.string,
-    director: PropTypes.string,
-    starring: PropTypes.arrayOf.string,
-    text: PropTypes.string,
-    rating: PropTypes.number,
-    ratingLevel: PropTypes.string,
-    ratingCount: PropTypes.number
-  }).isRequired
+  onMovieCardHover: PropTypes.func.isRequired
 };
 
 export default MovieCard;
