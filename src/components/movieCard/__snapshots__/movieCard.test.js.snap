@@ -5,23 +5,30 @@ exports[`Render MovieCard 1`] = `
   className="small-movie-card undefined"
   onMouseEnter={[Function]}
 >
-  <div
-    className="small-movie-card__image"
+  <a
+    href="/dev-film"
+    onClick={[Function]}
   >
-    <img
-      alt="Inception"
-      height="175"
-      src="http://picsum.photos/id/1005/300/150"
-      width="280"
-    />
-  </div>
+    <div
+      className="small-movie-card__image"
+      onClick={[Function]}
+    >
+      <img
+        alt="Inception"
+        height="175"
+        src="http://picsum.photos/id/1005/300/150"
+        width="280"
+      />
+    </div>
+  </a>
   <h3
     className="small-movie-card__title"
     onClick={[Function]}
   >
     <a
       className="small-movie-card__link"
-      href="movie-page.html"
+      href="/dev-film"
+      onClick={[Function]}
     >
       Inception
     </a>

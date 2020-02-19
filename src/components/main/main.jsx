@@ -127,7 +127,7 @@ const Main = (props) => {
           <MoviesList
             className={`catalog__movies-list`}
             films={props.films}
-            onMovieCardTitleClick={props.onMovieCardTitleClick}
+            onMovieCardClick={props.onMovieCardClick}
           />
 
           <div className="catalog__more">
@@ -160,12 +160,12 @@ Main.propTypes = {
     genre: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired,
   }).isRequired,
-  onMovieCardTitleClick: PropTypes.func.isRequired,
+  onMovieCardClick: PropTypes.func.isRequired,
   films: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     poster: PropTypes.string,
     key: PropTypes.number
-  })).isRequired,
+  })).isRequired
 };
 
 export default Main;

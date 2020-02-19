@@ -6,23 +6,30 @@ exports[`Render MoviesList 1`] = `
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <a
+      href="/dev-film"
+      onClick={[Function]}
     >
-      <img
-        alt="Fight Club"
-        height="175"
-        src="http://picsum.photos/id/1010/300/150"
-        width="280"
-      />
-    </div>
+      <div
+        className="small-movie-card__image"
+        onClick={[Function]}
+      >
+        <img
+          alt="Fight Club"
+          height="175"
+          src="http://picsum.photos/id/1010/300/150"
+          width="280"
+        />
+      </div>
+    </a>
     <h3
       className="small-movie-card__title"
       onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/dev-film"
+        onClick={[Function]}
       >
         Fight Club
       </a>
@@ -32,23 +39,30 @@ exports[`Render MoviesList 1`] = `
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <a
+      href="/dev-film"
+      onClick={[Function]}
     >
-      <img
-        alt="Pulp Fiction"
-        height="175"
-        src="http://picsum.photos/id/1011/300/150"
-        width="280"
-      />
-    </div>
+      <div
+        className="small-movie-card__image"
+        onClick={[Function]}
+      >
+        <img
+          alt="Pulp Fiction"
+          height="175"
+          src="http://picsum.photos/id/1011/300/150"
+          width="280"
+        />
+      </div>
+    </a>
     <h3
       className="small-movie-card__title"
       onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/dev-film"
+        onClick={[Function]}
       >
         Pulp Fiction
       </a>
@@ -58,23 +72,30 @@ exports[`Render MoviesList 1`] = `
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <a
+      href="/dev-film"
+      onClick={[Function]}
     >
-      <img
-        alt="The Godfather"
-        height="175"
-        src="http://picsum.photos/id/1012/300/150"
-        width="280"
-      />
-    </div>
+      <div
+        className="small-movie-card__image"
+        onClick={[Function]}
+      >
+        <img
+          alt="The Godfather"
+          height="175"
+          src="http://picsum.photos/id/1012/300/150"
+          width="280"
+        />
+      </div>
+    </a>
     <h3
       className="small-movie-card__title"
       onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/dev-film"
+        onClick={[Function]}
       >
         The Godfather
       </a>
@@ -84,23 +105,30 @@ exports[`Render MoviesList 1`] = `
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <a
+      href="/dev-film"
+      onClick={[Function]}
     >
-      <img
-        alt="Back to the Future"
-        height="175"
-        src="http://picsum.photos/id/1013/300/150"
-        width="280"
-      />
-    </div>
+      <div
+        className="small-movie-card__image"
+        onClick={[Function]}
+      >
+        <img
+          alt="Back to the Future"
+          height="175"
+          src="http://picsum.photos/id/1013/300/150"
+          width="280"
+        />
+      </div>
+    </a>
     <h3
       className="small-movie-card__title"
       onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/dev-film"
+        onClick={[Function]}
       >
         Back to the Future
       </a>
@@ -110,23 +138,30 @@ exports[`Render MoviesList 1`] = `
     className="small-movie-card catalog__movies-card"
     onMouseEnter={[Function]}
   >
-    <div
-      className="small-movie-card__image"
+    <a
+      href="/dev-film"
+      onClick={[Function]}
     >
-      <img
-        alt="The Pianist"
-        height="175"
-        src="http://picsum.photos/id/1014/300/150"
-        width="280"
-      />
-    </div>
+      <div
+        className="small-movie-card__image"
+        onClick={[Function]}
+      >
+        <img
+          alt="The Pianist"
+          height="175"
+          src="http://picsum.photos/id/1014/300/150"
+          width="280"
+        />
+      </div>
+    </a>
     <h3
       className="small-movie-card__title"
       onClick={[Function]}
     >
       <a
         className="small-movie-card__link"
-        href="movie-page.html"
+        href="/dev-film"
+        onClick={[Function]}
       >
         The Pianist
       </a>
