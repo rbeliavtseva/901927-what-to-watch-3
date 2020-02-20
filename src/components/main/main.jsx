@@ -164,7 +164,8 @@ Main.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     poster: PropTypes.string,
-    key: PropTypes.number
+    key: PropTypes.number,
+    preview: PropTypes.string
   })).isRequired
 };
 
