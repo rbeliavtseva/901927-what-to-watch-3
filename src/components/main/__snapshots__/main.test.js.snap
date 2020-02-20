@@ -356,6 +356,7 @@ exports[`Render Main 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <a
             href="/dev-film"
@@ -389,6 +390,7 @@ exports[`Render Main 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <a
             href="/dev-film"
@@ -422,6 +424,7 @@ exports[`Render Main 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <a
             href="/dev-film"
@@ -455,6 +458,7 @@ exports[`Render Main 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <a
             href="/dev-film"
@@ -488,6 +492,7 @@ exports[`Render Main 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <a
             href="/dev-film"

@@ -10,11 +10,12 @@ class MoviesList extends PureComponent {
       hoveredCard: null
     };
 
-    this.onMovieCardHoverHandler = this.onMovieCardHoverHandler.bind(this);
+    this.handleMovieCardHover = this.handleMovieCardHover.bind(this);
   }
 
-  onMovieCardHoverHandler(movie) {
+  handleMovieCardHover(movie) {
     this.setState({hoveredCard: movie});
+    this.setState({isHovered: this.toggleHoverState});
   }
 
   render() {
@@ -26,8 +27,7 @@ class MoviesList extends PureComponent {
         movie={movie}
         className={`catalog__movies-card`}
         onMovieCardClick={onMovieCardClick}
-        onMovieCardHover={this.onMovieCardHoverHandler}
-
+        onMovieCardHover={this.handleMovieCardHover}
       />
     );
 

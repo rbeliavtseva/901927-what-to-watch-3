@@ -9,7 +9,7 @@ export const films = [
     title: `Bohemian Rhapsody`,
     poster: `http://picsum.photos/id/1047/300/150`,
     id: 2,
-    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Macbeth`,
@@ -21,7 +21,7 @@ export const films = [
     title: `Aviator`,
     poster: `http://picsum.photos/id/114/300/150`,
     id: 4,
-    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `We need to talk about Kevin`,
