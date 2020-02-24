@@ -2,13 +2,15 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import VideoPlayer from "../videoPlayer/videoPlayer.jsx";
+import {VIDEO_DELAY} from "../videoPlayer/videoPlayer.jsx";
 
 class MovieCard extends PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      isHovered: false
+      isHovered: false,
+      isVideoPlaying: false
     };
 
     this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
@@ -20,17 +22,20 @@ class MovieCard extends PureComponent {
   }
 
   handleCardMouseEnter() {
+    this.setState({isHovered: true});
     setTimeout(
         () => {
-          this.props.onMovieCardHover(this.props.movie);
-          this.toggleHoverState();
-        }, 1000
+          if (this.state.isHovered) {
+            this.props.onMovieCardHover(this.props.movie);
+            this.setState({isVideoPlaying: true});
+          }
+        }, VIDEO_DELAY
     );
   }
 
   handleCardMouseLeave() {
+    this.setState({isHovered: false, isVideoPlaying: false});
     this.props.onMovieCardHover();
-    this.toggleHoverState();
   }
 
   render() {
@@ -42,7 +47,7 @@ class MovieCard extends PureComponent {
         onMouseLeave={this.handleCardMouseLeave}>
         <Link to="/dev-film">
           <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
-            {this.state.isHovered ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
+            {this.state.isVideoPlaying ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
           </div>
         </Link>
 
