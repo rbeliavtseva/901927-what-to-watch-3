@@ -6,11 +6,6 @@ class VideoPlayer extends PureComponent {
     super(props);
 
     this._videoRef = createRef();
-
-    this.state = {
-      movie: props.movie,
-      isPlaying: false
-    };
   }
 
   componentDidMount() {
@@ -27,8 +22,8 @@ class VideoPlayer extends PureComponent {
 
   render() {
     return (
-      <video width="auto" height="100%" muted poster={this.state.movie.poster} ref={this._videoRef}>
-        <source src={this.state.movie.preview} type="video/mp4"></source>
+      <video width="auto" height="100%" muted poster={this.props.movie.poster} ref={this._videoRef}>
+        <source src={this.props.movie.preview} type="video/mp4"></source>
       </video>
     );
   }
