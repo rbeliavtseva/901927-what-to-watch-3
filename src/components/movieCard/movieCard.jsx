@@ -2,52 +2,19 @@ import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import VideoPlayer from "../videoPlayer/videoPlayer.jsx";
-import {VIDEO_DELAY} from "../videoPlayer/videoPlayer.jsx";
+
 
 class MovieCard extends PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isHovered: false,
-      isVideoPlaying: false
-    };
-
-    this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
-    this.handleCardMouseLeave = this.handleCardMouseLeave.bind(this);
-  }
-
-  toggleHoverState() {
-    this.setState({isHovered: !this.state.isHovered});
-  }
-
-  handleCardMouseEnter() {
-    this.setState({isHovered: true});
-    setTimeout(
-        () => {
-          if (this.state.isHovered) {
-            this.props.onMovieCardHover(this.props.movie);
-            this.setState({isVideoPlaying: true});
-          }
-        }, VIDEO_DELAY
-    );
-  }
-
-  handleCardMouseLeave() {
-    this.setState({isHovered: false, isVideoPlaying: false});
-    this.props.onMovieCardHover();
-  }
-
   render() {
-    const {movie, className, onMovieCardClick} = this.props;
+    const {movie, className, onMovieCardClick, isVideoPlaying, handleCardMouseEnter, handleCardMouseLeave} = this.props;
 
     return (
       <article className={`small-movie-card ` + className}
-        onMouseEnter={this.handleCardMouseEnter}
-        onMouseLeave={this.handleCardMouseLeave}>
+        onMouseEnter={handleCardMouseEnter}
+        onMouseLeave={handleCardMouseLeave}>
         <Link to="/dev-film">
           <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
-            {this.state.isVideoPlaying ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
+            {isVideoPlaying ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
           </div>
         </Link>
 
@@ -68,7 +35,9 @@ MovieCard.propTypes = {
   }).isRequired,
   className: PropTypes.string,
   onMovieCardClick: PropTypes.func.isRequired,
-  onMovieCardHover: PropTypes.func.isRequired
+  isVideoPlaying: PropTypes.bool.isRequired,
+  handleCardMouseEnter: PropTypes.func.isRequired,
+  handleCardMouseLeave: PropTypes.func.isRequired
 };
 
 export default MovieCard;
