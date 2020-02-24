@@ -19,14 +19,6 @@ class MovieCard extends PureComponent {
   render() {
     const {movie, className, onMovieCardClick, onMovieCardHover} = this.props;
 
-    let img;
-
-    if (this.state.isHovered) {
-      img = <VideoPlayer movie={movie}/>;
-    } else {
-      img = <img src={movie.poster} alt={movie.title} width="280" height="175"/>;
-    }
-
     return (
       <article className={`small-movie-card ` + className}
         onMouseEnter={() => {
@@ -42,7 +34,7 @@ class MovieCard extends PureComponent {
         }}>
         <Link to="/dev-film">
           <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
-            {img}
+            {this.state.isHovered ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
           </div>
         </Link>
 
