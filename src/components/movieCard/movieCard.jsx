@@ -10,28 +10,36 @@ class MovieCard extends PureComponent {
     this.state = {
       isHovered: false
     };
+
+    this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
+    this.handleCardMouseLeave = this.handleCardMouseLeave.bind(this);
   }
 
   toggleHoverState() {
     this.setState({isHovered: !this.state.isHovered});
   }
 
+  handleCardMouseEnter() {
+    setTimeout(
+        () => {
+          this.props.onMovieCardHover(this.props.movie);
+          this.toggleHoverState();
+        }, 1000
+    );
+  }
+
+  handleCardMouseLeave() {
+    this.props.onMovieCardHover();
+    this.toggleHoverState();
+  }
+
   render() {
-    const {movie, className, onMovieCardClick, onMovieCardHover} = this.props;
+    const {movie, className, onMovieCardClick} = this.props;
 
     return (
       <article className={`small-movie-card ` + className}
-        onMouseEnter={() => {
-          setTimeout(() => {
-            onMovieCardHover(movie);
-            this.toggleHoverState();
-          },
-          1000);
-        }}
-        onMouseLeave={() => {
-          onMovieCardHover();
-          this.toggleHoverState();
-        }}>
+        onMouseEnter={this.handleCardMouseEnter}
+        onMouseLeave={this.handleCardMouseLeave}>
         <Link to="/dev-film">
           <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
             {this.state.isHovered ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
