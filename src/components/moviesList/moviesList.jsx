@@ -15,7 +15,6 @@ class MoviesList extends PureComponent {
 
   handleMovieCardHover(movie) {
     this.setState({hoveredCard: movie});
-    this.setState({isHovered: this.toggleHoverState});
   }
 
   render() {
