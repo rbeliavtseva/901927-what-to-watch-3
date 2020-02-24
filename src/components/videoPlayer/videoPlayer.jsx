@@ -14,12 +14,6 @@ class VideoPlayer extends PureComponent {
     video.play();
   }
 
-  componentWillUnmount() {
-    const video = this._videoRef.current;
-
-    video.pause();
-  }
-
   render() {
     return (
       <video width="auto" height="100%" muted poster={this.props.movie.poster} ref={this._videoRef}>
