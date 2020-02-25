@@ -13,11 +13,11 @@ const withHoveredState = (Component) => {
         isVideoPlaying: false
       };
 
-      this.handleCardMouseEnter = this.handleCardMouseEnter.bind(this);
-      this.handleCardMouseLeave = this.handleCardMouseLeave.bind(this);
+      this.onCardMouseEnter = this.onCardMouseEnter.bind(this);
+      this.onCardMouseLeave = this.onCardMouseLeave.bind(this);
     }
 
-    handleCardMouseEnter() {
+    onCardMouseEnter() {
       this.setState({isHovered: true});
       setTimeout(
           () => {
@@ -29,7 +29,7 @@ const withHoveredState = (Component) => {
       );
     }
 
-    handleCardMouseLeave() {
+    onCardMouseLeave() {
       this.setState({isHovered: false, isVideoPlaying: false});
       this.props.onMovieCardHover();
     }
@@ -39,8 +39,8 @@ const withHoveredState = (Component) => {
         <Component
           {...this.props}
           isVideoPlaying={this.state.isVideoPlaying}
-          handleCardMouseEnter={this.handleCardMouseEnter}
-          handleCardMouseLeave={this.handleCardMouseLeave}
+          onCardMouseEnter={this.onCardMouseEnter}
+          onCardMouseLeave={this.onCardMouseLeave}
         />
       );
     }
