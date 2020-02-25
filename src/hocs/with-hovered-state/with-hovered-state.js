@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
-import {VIDEO_DELAY} from "../../components/videoPlayer/videoPlayer.jsx";
 import PropTypes from "prop-types";
+
+const VIDEO_DELAY = 1000;
 
 const withHoveredState = (Component) => {
   class WithHoveredState extends PureComponent {

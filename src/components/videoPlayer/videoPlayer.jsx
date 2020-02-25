@@ -1,8 +1,6 @@
 import React, {PureComponent, createRef} from "react";
 import PropTypes from "prop-types";
 
-export const VIDEO_DELAY = 1000;
-
 class VideoPlayer extends PureComponent {
   constructor(props) {
     super(props);
