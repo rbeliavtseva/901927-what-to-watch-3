@@ -29,7 +29,8 @@ class MoviesList extends PureComponent {
         movie={movie}
         className={`catalog__movies-card`}
         onMovieCardClick={onMovieCardClick}
-        onMovieCardHover={this.handleMovieCardHover}
+        onMouseEnter={() => this.handleMovieCardHover(movie)}
+        onMouseLeave={this.handleMovieCardHover}
       />
     );
 

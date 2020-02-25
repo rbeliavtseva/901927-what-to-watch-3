@@ -35,27 +35,25 @@ const movieFullInfo = new Map([
   ]
 ]);
 
-const mockEvent = {
-  preventDefault() {}
-};
-
 it(`Hover on movie card should pass to the callback data-object from which this card was created`, () => {
-  const onMovieCardHover = jest.fn();
+  const onMouseEnter = jest.fn();
 
   const movieCard = shallow(
       <MovieCard
         movie={movie}
         onMovieCardClick={() => {}}
-        onMovieCardHover={onMovieCardHover}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={()=>{}}
         movieFullInfo={movieFullInfo}
+        isHovered={true}
       />
   );
 
-  movieCard.simulate(`mouseenter`, mockEvent);
+  movieCard.simulate(`mouseenter`, movie);
 
-  expect(onMovieCardHover).toHaveBeenCalledTimes(1);
+  expect(onMouseEnter).toHaveBeenCalledTimes(1);
 
-  expect(onMovieCardHover.mock.calls[0][0]).toMatchObject(movie);
+  expect(onMouseEnter.mock.calls[0][0]).toMatchObject(movie);
 });
 
 it(`Click om movie card should return fullMovieInfo data-object`, () => {
@@ -65,8 +63,10 @@ it(`Click om movie card should return fullMovieInfo data-object`, () => {
       <MovieCard
         movie={movie}
         onMovieCardClick={onMovieCardClick}
-        onMovieCardHover={() => {}}
+        onMouseEnter={()=>{}}
+        onMouseLeave={()=>{}}
         movieFullInfo={movieFullInfo}
+        isHovered={true}
       />
   );
 

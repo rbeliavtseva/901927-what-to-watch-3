@@ -35,6 +35,9 @@ it(`Render MovieCard`, () => {
             onMovieCardHover={()=>{}}
             onMovieCardClick={()=>{}}
             movieFullInfo={movieFullInfo}
+            onMouseEnter={()=>{}}
+            onMouseLeave={()=>{}}
+            isHovered={false}
           />
         </BrowserRouter>
     )

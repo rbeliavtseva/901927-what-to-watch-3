@@ -9,53 +9,48 @@ const withHoveredState = (Component) => {
       super(props);
 
       this.state = {
-        isHovered: false,
-        isVideoPlaying: false
+        hovering: false,
+        isHovered: false
       };
 
-      this.onCardMouseEnter = this.onCardMouseEnter.bind(this);
-      this.onCardMouseLeave = this.onCardMouseLeave.bind(this);
+      this.onMouseEnter = this.onMouseEnter.bind(this);
+      this.onMouseLeave = this.onMouseLeave.bind(this);
     }
 
-    onCardMouseEnter() {
-      this.setState({isHovered: true});
+    onMouseEnter() {
+      this.setState({hovering: true});
       setTimeout(
           () => {
-            if (this.state.isHovered) {
-              this.props.onMovieCardHover(this.props.movie);
-              this.setState({isVideoPlaying: true});
+            if (this.state.hovering) {
+              this.props.onMouseEnter();
+              this.setState({isHovered: true});
             }
           }, VIDEO_DELAY
       );
     }
 
-    onCardMouseLeave() {
-      this.setState({isHovered: false, isVideoPlaying: false});
-      this.props.onMovieCardHover();
+    onMouseLeave() {
+      this.setState({hovering: false, isHovered: false});
+      this.props.onMouseLeave();
     }
 
     render() {
       return (
         <Component
           {...this.props}
-          isVideoPlaying={this.state.isVideoPlaying}
-          onCardMouseEnter={this.onCardMouseEnter}
-          onCardMouseLeave={this.onCardMouseLeave}
+          isHovered={this.state.isHovered}
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
         />
       );
     }
   }
 
   WithHoveredState.propTypes = {
-    movie: PropTypes.exact({
-      title: PropTypes.string.isRequired,
-      poster: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      preview: PropTypes.string.isRequired
-    }).isRequired,
     className: PropTypes.string,
     onMovieCardClick: PropTypes.func.isRequired,
-    onMovieCardHover: PropTypes.func.isRequired
+    onMouseEnter: PropTypes.func.isRequired,
+    onMouseLeave: PropTypes.func.isRequired
   };
 
   return WithHoveredState;
