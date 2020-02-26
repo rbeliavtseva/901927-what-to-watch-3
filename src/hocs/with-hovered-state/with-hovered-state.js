@@ -13,11 +13,11 @@ const withHoveredState = (Component) => {
         isHovered: false
       };
 
-      this.onMouseEnter = this.onMouseEnter.bind(this);
-      this.onMouseLeave = this.onMouseLeave.bind(this);
+      this.handleMouseEnter = this.handleMouseEnter.bind(this);
+      this.handleMouseLeave = this.handleMouseLeave.bind(this);
     }
 
-    onMouseEnter() {
+    handleMouseEnter() {
       this.setState({hovering: true});
       setTimeout(
           () => {
@@ -29,7 +29,7 @@ const withHoveredState = (Component) => {
       );
     }
 
-    onMouseLeave() {
+    handleMouseLeave() {
       this.setState({hovering: false, isHovered: false});
       this.props.onMouseLeave();
     }
@@ -39,8 +39,8 @@ const withHoveredState = (Component) => {
         <Component
           {...this.props}
           isHovered={this.state.isHovered}
-          onMouseEnter={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
         />
       );
     }
