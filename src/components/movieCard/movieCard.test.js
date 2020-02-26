@@ -7,7 +7,8 @@ import {BrowserRouter} from "react-router-dom";
 const movie = {
   title: `Inception`,
   poster: `http://picsum.photos/id/1005/300/150`,
-  id: 110
+  id: 110,
+  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 const movieFullInfo = {
@@ -34,6 +35,9 @@ it(`Render MovieCard`, () => {
             onMovieCardHover={()=>{}}
             onMovieCardClick={()=>{}}
             movieFullInfo={movieFullInfo}
+            onMouseEnter={()=>{}}
+            onMouseLeave={()=>{}}
+            isHovered={false}
           />
         </BrowserRouter>
     )

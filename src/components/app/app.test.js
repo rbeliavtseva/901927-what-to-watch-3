@@ -13,27 +13,32 @@ const films = [
   {
     title: `Fight Club`,
     poster: `http://picsum.photos/id/1030/300/150`,
-    id: 19
+    id: 19,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Pulp Fiction`,
     poster: `http://picsum.photos/id/1031/300/150`,
-    id: 20
+    id: 20,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `The Godfather`,
     poster: `http://picsum.photos/id/1032/300/150`,
-    id: 21
+    id: 21,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Back to the Future`,
     poster: `http://picsum.photos/id/1033/300/150`,
-    id: 22
+    id: 22,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `The Pianist`,
     poster: `http://picsum.photos/id/1034/300/150`,
-    id: 23
+    id: 23,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   }
 ];
 

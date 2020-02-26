@@ -1,6 +1,9 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import MovieCard from "../movieCard/movieCard.jsx";
+import withHoveredState from "../../hocs/with-hovered-state/with-hovered-state.js";
+
+const MovieCardWrapped = withHoveredState(MovieCard);
 
 class MoviesList extends PureComponent {
   constructor(props) {
@@ -10,10 +13,10 @@ class MoviesList extends PureComponent {
       hoveredCard: null
     };
 
-    this.onMovieCardHoverHandler = this.onMovieCardHoverHandler.bind(this);
+    this.handleMovieCardHover = this.handleMovieCardHover.bind(this);
   }
 
-  onMovieCardHoverHandler(movie) {
+  handleMovieCardHover(movie) {
     this.setState({hoveredCard: movie});
   }
 
@@ -21,13 +24,13 @@ class MoviesList extends PureComponent {
     const {films, onMovieCardClick, className} = this.props;
 
     const movieCards = films.map((movie) =>
-      <MovieCard
+      <MovieCardWrapped
         key={movie.id}
         movie={movie}
         className={`catalog__movies-card`}
         onMovieCardClick={onMovieCardClick}
-        onMovieCardHover={this.onMovieCardHoverHandler}
-
+        onMouseEnter={() => this.handleMovieCardHover(movie)}
+        onMouseLeave={this.handleMovieCardHover}
       />
     );
 
@@ -43,7 +46,8 @@ MoviesList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     poster: PropTypes.string,
-    id: PropTypes.number
+    id: PropTypes.number,
+    preview: PropTypes.string
   })).isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
   className: PropTypes.string
