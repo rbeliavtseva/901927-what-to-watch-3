@@ -10,10 +10,10 @@ class Tabs extends PureComponent {
       activeTab: this.props.children[0].props.label
     };
 
-    this.onClickTabItem = this.onClickTabItem.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  onClickTabItem(tab) {
+  handleClick(tab) {
     this.setState({
       activeTab: tab
     });
@@ -21,7 +21,7 @@ class Tabs extends PureComponent {
 
   render() {
     const {
-      onClickTabItem,
+      handleClick,
       props: {
         children
       },
@@ -42,7 +42,7 @@ class Tabs extends PureComponent {
                   activeTab={activeTab}
                   key={label}
                   label={label}
-                  onClick={onClickTabItem}
+                  onClick={handleClick}
                 />
               );
             })}

@@ -31,9 +31,11 @@ class App extends PureComponent {
   }
 
   _renderMoviePage() {
+    const {reviews} = this.props;
     return (
       <MoviePage
         movieFullInfo={this.state.movieInfo}
+        reviews={reviews}
       />
     );
   }
@@ -62,7 +64,13 @@ App.propTypes = {
     id: PropTypes.number,
     preview: PropTypes.string
   })).isRequired,
-  filmsFullInfo: PropTypes.instanceOf(Map).isRequired
+  filmsFullInfo: PropTypes.instanceOf(Map).isRequired,
+  reviews: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    text: PropTypes.string,
+    date: PropTypes.string,
+    rating: PropTypes.string
+  })).isRequired
 };
 
 export default App;
