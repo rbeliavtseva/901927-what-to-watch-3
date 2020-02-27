@@ -12,33 +12,38 @@ const movie = {
 const films = [
   {
     title: `Fight Club`,
-    poster: `http://picsum.photos/id/1030/300/150`,
+    poster: `http://picsum.photos/id/1020/300/150`,
     id: 19,
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    genre: `Drama`,
   },
   {
     title: `Pulp Fiction`,
-    poster: `http://picsum.photos/id/1031/300/150`,
+    poster: `http://picsum.photos/id/1021/300/150`,
     id: 20,
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    genre: `Triller`,
   },
   {
     title: `The Godfather`,
-    poster: `http://picsum.photos/id/1032/300/150`,
+    poster: `http://picsum.photos/id/1022/300/150`,
     id: 21,
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    genre: `Drama`,
   },
   {
     title: `Back to the Future`,
-    poster: `http://picsum.photos/id/1033/300/150`,
+    poster: `http://picsum.photos/id/1023/300/150`,
     id: 22,
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    genre: `Science Fiction`,
   },
   {
     title: `The Pianist`,
-    poster: `http://picsum.photos/id/1034/300/150`,
+    poster: `http://picsum.photos/id/1024/300/150`,
     id: 23,
-    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+    genre: `Drama`,
   }
 ];
 

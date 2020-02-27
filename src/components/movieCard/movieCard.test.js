@@ -8,7 +8,8 @@ const movie = {
   title: `Inception`,
   poster: `http://picsum.photos/id/1005/300/150`,
   id: 110,
-  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  genre: `Animation`
 };
 
 const movieFullInfo = {
@@ -23,7 +24,7 @@ const movieFullInfo = {
         Spots, with the help of five other dogs... with many obstacles along the way.`,
   rating: 7.9,
   ratingLevel: `Good`,
-  ratingCount: 199
+  ratingCount: 199,
 };
 
 it(`Render MovieCard`, () => {

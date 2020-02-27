@@ -31,11 +31,13 @@ class App extends PureComponent {
   }
 
   _renderMoviePage() {
-    const {reviews} = this.props;
+    const {reviews, films} = this.props;
     return (
       <MoviePage
         movieFullInfo={this.state.movieInfo}
         reviews={reviews}
+        films={films}
+        onMovieCardClick={this.cardClickHandler}
       />
     );
   }

@@ -11,7 +11,8 @@ const movie = {
   title: `Inception`,
   poster: `http://picsum.photos/id/1019/300/150`,
   id: 25,
-  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
+  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  genre: `Triller`
 };
 
 const movieFullInfo = new Map([
