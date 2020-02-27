@@ -17,13 +17,23 @@ const movie = {
         adventure and the friendships and awakenings of this country life that is inhabited by Fantastic Mr. Fox and his friends.`,
   rating: 7.8,
   ratingLevel: `Good`,
-  ratingCount: 200
+  ratingCount: 200,
+  runTime: `2h 20min`
 };
+
+const review = [{
+  name: `Kate Middleton`,
+  text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Placerat vestibulum lectus mauris ultrices. Ultrices dui sapien eget mi proin. Vitae auctor eu augue ut. Parturient montes nascetur ridiculus mus mauris vitae.`,
+  date: `April 1, 2016`,
+  rating: `10,0`
+}];
 
 it(`Render MoviePage`, () => {
   const tree = renderer
     .create(<MoviePage
       movieFullInfo={movie}
+      reviews={review}
     />)
     .toJSON();
 
