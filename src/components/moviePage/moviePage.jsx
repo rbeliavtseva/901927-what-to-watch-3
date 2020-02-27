@@ -8,14 +8,16 @@ const MoviePage = ({movieFullInfo, reviews}) => {
     return (null);
   }
 
-  const reviewsFirstCol = reviews.slice(0, 3).map((review) =>
+  const midPoint = Math.ceil(reviews.length / 2);
+
+  const reviewsFirstCol = reviews.slice(0, midPoint).map((review) =>
     <Review
       key={review.name}
       review={review}
     />
   );
 
-  const reviewsSecondCol = reviews.slice(3, 6).map((review) =>
+  const reviewsSecondCol = reviews.slice(midPoint, reviews.length).map((review) =>
     <Review
       key={review.name}
       review={review}
