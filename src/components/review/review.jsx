@@ -9,7 +9,7 @@ const Review = ({review}) => {
 
         <footer className="review__details">
           <cite className="review__author">{review.name}</cite>
-          <time className="review__date" dateTime="2016-12-24">{review.date}</time>
+          <time className="review__date">{review.date}</time>
         </footer>
       </blockquote>
 
