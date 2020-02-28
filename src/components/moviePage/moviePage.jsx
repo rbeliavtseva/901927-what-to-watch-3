@@ -114,9 +114,9 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
                     </p>
                     <p className="movie-card__details-item">
                       <strong className="movie-card__details-name">Starring</strong>
-                      <span className="movie-card__details-value">
+                      <pre className="movie-card__details-value" style={{margin: `0`, font: `inherit`}}>
                         {movieFullInfo.starring.join(`,\n`)}
-                      </span>
+                      </pre>
                     </p>
                   </div>
 
