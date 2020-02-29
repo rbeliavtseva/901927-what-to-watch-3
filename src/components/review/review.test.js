@@ -7,7 +7,8 @@ const review = {
   text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Placerat vestibulum lectus mauris ultrices. Ultrices dui sapien eget mi proin. Vitae auctor eu augue ut. Parturient montes nascetur ridiculus mus mauris vitae.`,
   date: `April 1, 2016`,
-  rating: `10,0`
+  rating: `10,0`,
+  id: 10
 };
 
 it(`Render Review`, () => {

@@ -1,67 +1,39 @@
-import React, {PureComponent} from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import Tab from "../tab/tab.jsx";
 
-class Tabs extends PureComponent {
-  constructor(props) {
-    super(props);
+const Tabs = ({children, activeIndex, onClick}) => {
+  const labels = [`Overview`, `Details`, `Reviews`];
 
-    this.state = {
-      activeTab: this.props.children[0].props.label
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(tab) {
-    this.setState({
-      activeTab: tab
-    });
-  }
-
-  render() {
-    const {
-      handleClick,
-      props: {
-        children
-      },
-      state: {
-        activeTab
-      }
-    } = this;
-
+  const tabItems = children.map((_, index) => {
     return (
-      <div className="movie-card__desc">
-        <nav className="movie-nav movie-card__nav">
-          <ul className="movie-nav__list">
-            {children.map((child) => {
-              const {label} = child.props;
-
-              return (
-                <Tab
-                  activeTab={activeTab}
-                  key={label}
-                  label={label}
-                  onClick={handleClick}
-                />
-              );
-            })}
-          </ul>
-        </nav>
-        <div>
-          {children.map((child) => {
-            return (
-              child.props.label !== activeTab ? null : child.props.children
-            );
-          })}
-        </div>
-      </div>
+      <li className={`movie-nav__item ${activeIndex === index ? `movie-nav__item--active` : ``}`} onClick={() => onClick(index)} key={index}>
+        <a href="#" className="movie-nav__link">{labels[index]}</a>
+      </li>
     );
-  }
-}
+  });
+
+  return (
+    <div className="movie-card__desc">
+      <nav className="movie-nav movie-card__nav">
+        <ul className="movie-nav__list">
+          {tabItems}
+        </ul>
+      </nav>
+      <div>
+        {children.map((child, index) => {
+          return (
+            index !== activeIndex ? null : child.props.children
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 Tabs.propTypes = {
-  children: PropTypes.instanceOf(Array).isRequired
+  children: PropTypes.instanceOf(Array).isRequired,
+  activeIndex: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default Tabs;

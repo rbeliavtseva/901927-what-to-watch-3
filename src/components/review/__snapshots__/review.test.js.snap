@@ -23,7 +23,6 @@ exports[`Render Review 1`] = `
       </cite>
       <time
         className="review__date"
-        dateTime="2016-12-24"
       >
         April 1, 2016
       </time>

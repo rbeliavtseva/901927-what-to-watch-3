@@ -23,7 +23,8 @@ Review.propTypes = {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired
+    rating: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired
   }).isRequired
 };
 

@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import Tabs from "../tabs/tabs.jsx";
 import Review from "../review/review.jsx";
 import MoviesList from "../moviesList/moviesList.jsx";
+import withActiveIndex from "../../hocs/with-active-index/with-active-index.js";
+
+const TabsWrapped = withActiveIndex(Tabs);
 
 const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
   if (movieFullInfo === null) {
@@ -86,8 +89,8 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
               <img src={movieFullInfo.poster} alt={movieFullInfo.title} width="218" height="327" />
             </div>
 
-            <Tabs>
-              <div label="Overview">
+            <TabsWrapped>
+              <div>
                 <div className="movie-rating">
                   <div className="movie-rating__score">{movieFullInfo.rating}</div>
                   <p className="movie-rating__meta">
@@ -105,7 +108,7 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
                 </div>
               </div>
 
-              <div label="Details">
+              <div>
                 <div className="movie-card__text movie-card__row">
                   <div className="movie-card__text-col">
                     <p className="movie-card__details-item">
@@ -137,7 +140,7 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
                 </div>
               </div>
 
-              <div label="Reviews">
+              <div>
                 <div className="movie-card__reviews movie-card__row">
                   <div className="movie-card__reviews-col">
                     {reviewsFirstCol}
@@ -148,8 +151,7 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
                   </div>
                 </div>
               </div>
-
-            </Tabs>
+            </TabsWrapped>
           </div>
         </div>
       </section>
@@ -186,7 +188,8 @@ MoviePage.propTypes = {
     name: PropTypes.string,
     text: PropTypes.string,
     date: PropTypes.string,
-    rating: PropTypes.string
+    rating: PropTypes.string,
+    id: PropTypes.number.isRequired
   })).isRequired,
   onMovieCardClick: PropTypes.func.isRequired,
   films: PropTypes.arrayOf(PropTypes.shape({
