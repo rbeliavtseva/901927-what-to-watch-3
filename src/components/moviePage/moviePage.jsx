@@ -16,14 +16,14 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
 
   const reviewsFirstCol = reviews.slice(0, midPoint).map((review) =>
     <Review
-      key={review.name}
+      key={review.id}
       review={review}
     />
   );
 
   const reviewsSecondCol = reviews.slice(midPoint, reviews.length).map((review) =>
     <Review
-      key={review.name}
+      key={review.id}
       review={review}
     />
   );
