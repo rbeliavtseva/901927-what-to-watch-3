@@ -26,7 +26,8 @@ MovieCard.propTypes = {
     title: PropTypes.string.isRequired,
     poster: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
-    preview: PropTypes.string.isRequired
+    preview: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired
   }).isRequired,
   className: PropTypes.string,
   onMovieCardClick: PropTypes.func.isRequired,

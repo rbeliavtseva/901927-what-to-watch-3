@@ -5,7 +5,7 @@ export const filmsFullInfo = new Map([
       year: 2018,
       genre: `Adventure`,
       director: `David Yates`,
-      starring: [`Eddie Redmayne`, `Katherine Waterston`, `Dan Fogler`],
+      starring: [`Eddie Redmayne`, `Katherine Waterston`, `Dan Fogler`, `Johnny Depp`, `Zoë Kravitz`, `Ezra Miller`, `Kevin Guthrie`, `Carmen Ejogo`, `Callum Turner`],
       text: `In an effort to thwart Grindelwald's plans of raising pure-blood wizards to rule over all non-magical beings,
             Albus Dumbledore enlists his former student Newt Scamander, who agrees to help, though he's unaware of the dangers that lie ahead.
             Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.`,
@@ -13,7 +13,8 @@ export const filmsFullInfo = new Map([
       backgroundPoster: `http://picsum.photos/id/1031/1500/500`,
       rating: 6.6,
       ratingLevel: `Good`,
-      ratingCount: 240
+      ratingCount: 240,
+      runTime: `2h 14min`
     }
   ],
   [2,
@@ -22,13 +23,14 @@ export const filmsFullInfo = new Map([
       year: 2018,
       genre: `Biography`,
       director: `Bryan Singer`,
-      starring: [`Rami Malek`, `Lucy Boynton`, `Gwilym Lee`],
+      starring: [`Rami Malek`, `Lucy Boynton`, `Gwilym Lee`, `Ben Hardy`, `Joseph Mazzello`, `Aidan Gillen`, `Allen Leech`, `Tom Hollander`, `Mike Myers`],
       text: `The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).`,
       poster: `http://picsum.photos/id/1047/250/350`,
       backgroundPoster: `http://picsum.photos/id/1047/1500/500`,
       rating: 8.0,
       ratingLevel: `Very good`,
-      ratingCount: 220
+      ratingCount: 220,
+      runTime: `2h 14min`
     }
   ],
   [3,
@@ -37,14 +39,15 @@ export const filmsFullInfo = new Map([
       year: 2015,
       genre: `Drama`,
       director: `Justin Kurzel`,
-      starring: [`Michael Fassbender`, `Marion Cotillard`, `Jack Madigan`],
+      starring: [`Michael Fassbender`, `Marion Cotillard`, `Jack Madigan`, `Paddy Considine`, `Lochlann Harris`, `Seylan Baxter`],
       text: `Macbeth, the Thane of Glamis, receives a prophecy from a trio of witches that one day he will become King of Scotland.
             Consumed by ambition and spurred to action by his wife, Macbeth murders his king and takes the throne for himself.`,
       poster: `http://picsum.photos/id/1059/250/350`,
       backgroundPoster: `http://picsum.photos/id/1059/1500/500`,
       rating: 6.6,
       ratingLevel: `Good`,
-      ratingCount: 190
+      ratingCount: 190,
+      runTime: `1h 53min`
     }
   ],
   [4,
@@ -53,13 +56,14 @@ export const filmsFullInfo = new Map([
       year: 2004,
       genre: `Biography`,
       director: `Martin Scorsese`,
-      starring: [`Leonardo DiCaprio`, `Cate Blanchett`, `Kate Beckinsale`],
+      starring: [`Leonardo DiCaprio`, `Cate Blanchett`, `Kate Beckinsale`, `John C. Reilly`, `Alec Baldwin`, `Alan Alda`, `Ian Holm`, `Danny Huston`, `Gwen Stefani`, `Jude Law`],
       text: `A biopic depicting the early years of legendary Director and aviator Howard Hughes' career from the late 1920s to the mid 1940s.`,
       poster: `http://picsum.photos/id/114/250/350`,
       backgroundPoster: `http://picsum.photos/id/114/1500/500`,
       rating: 7.5,
       ratingLevel: `Very good`,
-      ratingCount: 300
+      ratingCount: 300,
+      runTime: `2h 50min`
     }
   ],
   [5,
@@ -68,14 +72,15 @@ export const filmsFullInfo = new Map([
       year: 2011,
       genre: `Drama`,
       director: `Lynne Ramsay`,
-      starring: [`Tilda Swinton`, `John C. Reilly`, `Ezra Miller`],
+      starring: [`Tilda Swinton`, `John C. Reilly`, `Ezra Miller`, `Jasper Newell`, `Rock Duer`, `	Ashley Gerasimovich`, `Siobhan Fallon Hogan`, `Alex Manette`],
       text: `Kevin's mother struggles to love her strange child, despite the increasingly dangerous things he says and does as he grows up.
             But Kevin is just getting started, and his final act will be beyond anything anyone imagined.`,
       poster: `http://picsum.photos/id/129/250/350`,
       backgroundPoster: `http://picsum.photos/id/129/1500/500`,
       rating: 7.5,
       ratingLevel: `Very good`,
-      ratingCount: 200
+      ratingCount: 200,
+      runTime: `1h 52min`,
     }
   ]
 ]);
