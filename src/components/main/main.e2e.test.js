@@ -2,6 +2,9 @@ import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from "./main.jsx";
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import {reducer} from "../../reducer/reducer.js";
 
 // Mocks
 const movie = {
@@ -58,6 +61,11 @@ const movieFullInfo = {
   ratingCount: 199
 };
 
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
+);
+
 Enzyme.configure({
   adapter: new Adapter(),
 });
@@ -66,12 +74,15 @@ it(`Should movie card be pressed`, () => {
   const onMovieCardClick = jest.fn();
 
   const main = shallow(
-      <Main
-        movie={movie}
-        films={films}
-        onMovieCardClick={onMovieCardClick}
-        movieFullInfo={movieFullInfo}
-      />
+      <Provider store={store}>
+        <Main
+          movie={movie}
+          films={films}
+          onMovieCardClick={onMovieCardClick}
+          movieFullInfo={movieFullInfo}
+        />
+      </Provider>
+
   );
 
   const movieCardTitle = main.find(`.small-movie-card__title`);

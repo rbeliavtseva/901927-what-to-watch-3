@@ -2,7 +2,9 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Main from "./main.jsx";
 import {BrowserRouter} from "react-router-dom";
-
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import {reducer} from "../../reducer/reducer.js";
 
 // Mocks
 const movie = {
@@ -64,16 +66,24 @@ const movieFullInfo = {
   ratingCount: 199
 };
 
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
+);
+
 it(`Render Main`, () => {
   const tree = renderer
     .create(
         <BrowserRouter>
-          <Main
-            movie={movie}
-            films={films}
-            onMovieCardClick={() => {}}
-            movieFullInfo={movieFullInfo}
-          />
+          <Provider store={store}>
+            <Main
+              movie={movie}
+              films={films}
+              onMovieCardClick={() => {}}
+              movieFullInfo={movieFullInfo}
+            />
+          </Provider>
+
         </BrowserRouter>
     )
     .toJSON();
