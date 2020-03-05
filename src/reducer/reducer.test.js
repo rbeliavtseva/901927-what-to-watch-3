@@ -1,39 +1,45 @@
 import {reducer, ActionType} from "./reducer.js";
 import {films} from '../mocks/films.js';
 
+const genresList = [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)];
+
+const initialState = {
+  genre: `All genres`,
+  genres: genresList,
+  movies: films
+};
+
 it(`Reducer without additional parameters should return initial state`, () => {
-  expect(reducer(void 0, {})).toEqual({
-    genre: `All genres`,
-    genres: [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)],
-    movies: films
-  });
+  expect(reducer(void 0, {})).toEqual(initialState);
 });
 
 it(`Reducer should change filter value`, () => {
-  expect(reducer({
-    genre: `All genres`,
-    genres: [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)],
-    movies: films
-  }, {
+  expect(reducer(initialState, {
     type: ActionType.CHANGE_GENRE_FILTER,
     payload: `Comedy`,
   })).toEqual({
     genre: `Comedy`,
-    genres: [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)],
+    genres: genresList,
     movies: films
   });
 });
 
-it(`Reducer should return an array of movie objects`, () => {
+it(`Reducer should return an array of all availible movie objects`, () => {
+  expect(reducer(initialState, {
+    type: ActionType.GET_MOVIES,
+  })).toEqual(initialState);
+});
+
+it(`Reducer should return an array of filtered movie objects with specific genre`, () => {
   expect(reducer({
-    genre: `All genres`,
-    genres: [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)],
+    genre: `Drama`,
+    genres: genresList,
     movies: films
   }, {
     type: ActionType.GET_MOVIES,
   })).toEqual({
-    genre: `All genres`,
-    genres: [`All genres`, ...films.map((film) => film.genre).filter((film, i, self) => self.indexOf(film) === i)],
-    movies: films
+    genre: `Drama`,
+    genres: genresList,
+    movies: films.filter((film) => film.genre === `Drama`)
   });
 });
