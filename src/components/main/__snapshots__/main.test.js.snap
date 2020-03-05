@@ -251,6 +251,7 @@ exports[`Render Main 1`] = `
       >
         <li
           className="catalog__genres-item catalog__genres-item--active"
+          onClick={[Function]}
         >
           <a
             className="catalog__genres-link"
@@ -260,93 +261,36 @@ exports[`Render Main 1`] = `
           </a>
         </li>
         <li
-          className="catalog__genres-item"
+          className="catalog__genres-item "
+          onClick={[Function]}
         >
           <a
             className="catalog__genres-link"
             href="#"
           >
-            Comedies
+            Adventure
           </a>
         </li>
         <li
-          className="catalog__genres-item"
+          className="catalog__genres-item "
+          onClick={[Function]}
         >
           <a
             className="catalog__genres-link"
             href="#"
           >
-            Crime
+            Biography
           </a>
         </li>
         <li
-          className="catalog__genres-item"
+          className="catalog__genres-item "
+          onClick={[Function]}
         >
           <a
             className="catalog__genres-link"
             href="#"
           >
-            Documentary
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Dramas
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Horror
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Kids & Family
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Romance
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Sci-Fi
-          </a>
-        </li>
-        <li
-          className="catalog__genres-item"
-        >
-          <a
-            className="catalog__genres-link"
-            href="#"
-          >
-            Thrillers
+            Drama
           </a>
         </li>
       </ul>
@@ -367,9 +311,9 @@ exports[`Render Main 1`] = `
               onClick={[Function]}
             >
               <img
-                alt="Fight Club"
+                alt="Fantastic Beasts: The Crimes of Grindelwald"
                 height="175"
-                src="http://picsum.photos/id/1020/300/150"
+                src="http://picsum.photos/id/1031/300/150"
                 width="280"
               />
             </div>
@@ -383,7 +327,7 @@ exports[`Render Main 1`] = `
               href="/dev-film"
               onClick={[Function]}
             >
-              Fight Club
+              Fantastic Beasts: The Crimes of Grindelwald
             </a>
           </h3>
         </article>
@@ -401,9 +345,9 @@ exports[`Render Main 1`] = `
               onClick={[Function]}
             >
               <img
-                alt="Pulp Fiction"
+                alt="Bohemian Rhapsody"
                 height="175"
-                src="http://picsum.photos/id/1021/300/150"
+                src="http://picsum.photos/id/1047/300/150"
                 width="280"
               />
             </div>
@@ -417,7 +361,7 @@ exports[`Render Main 1`] = `
               href="/dev-film"
               onClick={[Function]}
             >
-              Pulp Fiction
+              Bohemian Rhapsody
             </a>
           </h3>
         </article>
@@ -435,9 +379,9 @@ exports[`Render Main 1`] = `
               onClick={[Function]}
             >
               <img
-                alt="The Godfather"
+                alt="Macbeth"
                 height="175"
-                src="http://picsum.photos/id/1022/300/150"
+                src="http://picsum.photos/id/1059/300/150"
                 width="280"
               />
             </div>
@@ -451,7 +395,7 @@ exports[`Render Main 1`] = `
               href="/dev-film"
               onClick={[Function]}
             >
-              The Godfather
+              Macbeth
             </a>
           </h3>
         </article>
@@ -469,9 +413,9 @@ exports[`Render Main 1`] = `
               onClick={[Function]}
             >
               <img
-                alt="Back to the Future"
+                alt="Aviator"
                 height="175"
-                src="http://picsum.photos/id/1023/300/150"
+                src="http://picsum.photos/id/114/300/150"
                 width="280"
               />
             </div>
@@ -485,7 +429,7 @@ exports[`Render Main 1`] = `
               href="/dev-film"
               onClick={[Function]}
             >
-              Back to the Future
+              Aviator
             </a>
           </h3>
         </article>
@@ -503,9 +447,9 @@ exports[`Render Main 1`] = `
               onClick={[Function]}
             >
               <img
-                alt="The Pianist"
+                alt="We need to talk about Kevin"
                 height="175"
-                src="http://picsum.photos/id/1024/300/150"
+                src="http://picsum.photos/id/129/300/150"
                 width="280"
               />
             </div>
@@ -519,7 +463,7 @@ exports[`Render Main 1`] = `
               href="/dev-film"
               onClick={[Function]}
             >
-              The Pianist
+              We need to talk about Kevin
             </a>
           </h3>
         </article>
