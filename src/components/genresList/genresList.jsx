@@ -10,7 +10,7 @@ const GenresList = ({activeIndex, onClick, onFilterButtonClick, genres}) => {
           onClick(index);
           onFilterButtonClick(genres[index]);
         }}
-        key={index}>
+        key={genre}>
         <a href="#" className="catalog__genres-link">{genre}</a>
       </li>
     );
@@ -26,8 +26,8 @@ const GenresList = ({activeIndex, onClick, onFilterButtonClick, genres}) => {
 GenresList.propTypes = {
   activeIndex: PropTypes.number,
   onClick: PropTypes.func,
-  onFilterButtonClick: PropTypes.func,
-  genres: PropTypes.array
+  onFilterButtonClick: PropTypes.func.isRequired,
+  genres: PropTypes.array.isRequired
 };
 
 export default GenresList;
