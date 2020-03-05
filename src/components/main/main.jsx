@@ -148,11 +148,7 @@ Main.propTypes = {
   genres: PropTypes.array.isRequired
 };
 
-const mapStateToProps = (state) => ({
-  genre: state.genre,
-  movies: state.movies,
-  genres: state.genres
-});
+const mapStateToProps = ({genre, movies, genres}) => ({genre, movies, genres});
 
 const mapDispatchToProps = (dispatch) => ({
   onFilterButtonClick(genre) {
