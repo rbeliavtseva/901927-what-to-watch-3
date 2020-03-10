@@ -263,9 +263,11 @@ exports[`Render MoviePage 1`] = `
       >
         More like this
       </h2>
-      <div
-        className="catalog__movies-list"
-      />
+      <div>
+        <div
+          className="catalog__movies-list"
+        />
+      </div>
     </section>
   </div>
 </div>
