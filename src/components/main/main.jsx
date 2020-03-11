@@ -5,8 +5,11 @@ import GenresList from "../genresList/genresList.jsx";
 import withActiveIndex from "../../hocs/with-active-index/with-active-index.js";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer/reducer.js";
+import withLoadMore from "../../hocs/with-load-more/with-load-more.js";
 
 const GenresListWrapped = withActiveIndex(GenresList);
+
+const MoviesListWrapped = withLoadMore(MoviesList);
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
@@ -101,15 +104,11 @@ const Main = (props) => {
             genres={props.genres}
           />
 
-          <MoviesList
+          <MoviesListWrapped
             className={`catalog__movies-list`}
             films={props.movies}
             onMovieCardClick={props.onMovieCardClick}
           />
-
-          <div className="catalog__more">
-            <button className="catalog__button" type="button">Show more</button>
-          </div>
         </section>
 
 

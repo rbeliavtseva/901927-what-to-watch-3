@@ -294,189 +294,294 @@ exports[`Render Main 1`] = `
           </a>
         </li>
       </ul>
-      <div
-        className="catalog__movies-list"
-      >
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
+      <div>
+        <div
+          className="catalog__movies-list"
         >
-          <a
-            href="/dev-film"
-            onClick={[Function]}
-          >
-            <div
-              className="small-movie-card__image"
-              onClick={[Function]}
-            >
-              <img
-                alt="Fantastic Beasts: The Crimes of Grindelwald"
-                height="175"
-                src="http://picsum.photos/id/1031/300/150"
-                width="280"
-              />
-            </div>
-          </a>
-          <h3
-            className="small-movie-card__title"
-            onClick={[Function]}
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
-              className="small-movie-card__link"
               href="/dev-film"
               onClick={[Function]}
             >
-              Fantastic Beasts: The Crimes of Grindelwald
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Fantastic Beasts: The Crimes of Grindelwald"
+                  height="175"
+                  src="http://picsum.photos/id/1031/300/150"
+                  width="280"
+                />
+              </div>
             </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <a
-            href="/dev-film"
-            onClick={[Function]}
-          >
-            <div
-              className="small-movie-card__image"
+            <h3
+              className="small-movie-card__title"
               onClick={[Function]}
             >
-              <img
-                alt="Bohemian Rhapsody"
-                height="175"
-                src="http://picsum.photos/id/1047/300/150"
-                width="280"
-              />
-            </div>
-          </a>
-          <h3
-            className="small-movie-card__title"
-            onClick={[Function]}
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Fantastic Beasts: The Crimes of Grindelwald
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
-              className="small-movie-card__link"
               href="/dev-film"
               onClick={[Function]}
             >
-              Bohemian Rhapsody
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Bohemian Rhapsody"
+                  height="175"
+                  src="http://picsum.photos/id/1047/300/150"
+                  width="280"
+                />
+              </div>
             </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <a
-            href="/dev-film"
-            onClick={[Function]}
-          >
-            <div
-              className="small-movie-card__image"
+            <h3
+              className="small-movie-card__title"
               onClick={[Function]}
             >
-              <img
-                alt="Macbeth"
-                height="175"
-                src="http://picsum.photos/id/1059/300/150"
-                width="280"
-              />
-            </div>
-          </a>
-          <h3
-            className="small-movie-card__title"
-            onClick={[Function]}
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Bohemian Rhapsody
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
-              className="small-movie-card__link"
               href="/dev-film"
               onClick={[Function]}
             >
-              Macbeth
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Macbeth"
+                  height="175"
+                  src="http://picsum.photos/id/1059/300/150"
+                  width="280"
+                />
+              </div>
             </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <a
-            href="/dev-film"
-            onClick={[Function]}
-          >
-            <div
-              className="small-movie-card__image"
+            <h3
+              className="small-movie-card__title"
               onClick={[Function]}
             >
-              <img
-                alt="Aviator"
-                height="175"
-                src="http://picsum.photos/id/114/300/150"
-                width="280"
-              />
-            </div>
-          </a>
-          <h3
-            className="small-movie-card__title"
-            onClick={[Function]}
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Macbeth
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
-              className="small-movie-card__link"
               href="/dev-film"
               onClick={[Function]}
             >
-              Aviator
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Aviator"
+                  height="175"
+                  src="http://picsum.photos/id/114/300/150"
+                  width="280"
+                />
+              </div>
             </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <a
-            href="/dev-film"
-            onClick={[Function]}
-          >
-            <div
-              className="small-movie-card__image"
+            <h3
+              className="small-movie-card__title"
               onClick={[Function]}
             >
-              <img
-                alt="We need to talk about Kevin"
-                height="175"
-                src="http://picsum.photos/id/129/300/150"
-                width="280"
-              />
-            </div>
-          </a>
-          <h3
-            className="small-movie-card__title"
-            onClick={[Function]}
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Aviator
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <a
-              className="small-movie-card__link"
               href="/dev-film"
               onClick={[Function]}
             >
-              We need to talk about Kevin
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="We need to talk about Kevin"
+                  height="175"
+                  src="http://picsum.photos/id/129/300/150"
+                  width="280"
+                />
+              </div>
             </a>
-          </h3>
-        </article>
-      </div>
-      <div
-        className="catalog__more"
-      >
-        <button
-          className="catalog__button"
-          type="button"
+            <h3
+              className="small-movie-card__title"
+              onClick={[Function]}
+            >
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                We need to talk about Kevin
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <a
+              href="/dev-film"
+              onClick={[Function]}
+            >
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Fantastic Beasts: The Crimes of Grindelwald"
+                  height="175"
+                  src="http://picsum.photos/id/1031/300/150"
+                  width="280"
+                />
+              </div>
+            </a>
+            <h3
+              className="small-movie-card__title"
+              onClick={[Function]}
+            >
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Fantastic Beasts: The Crimes of Grindelwald
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <a
+              href="/dev-film"
+              onClick={[Function]}
+            >
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Bohemian Rhapsody"
+                  height="175"
+                  src="http://picsum.photos/id/1047/300/150"
+                  width="280"
+                />
+              </div>
+            </a>
+            <h3
+              className="small-movie-card__title"
+              onClick={[Function]}
+            >
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Bohemian Rhapsody
+              </a>
+            </h3>
+          </article>
+          <article
+            className="small-movie-card catalog__movies-card"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <a
+              href="/dev-film"
+              onClick={[Function]}
+            >
+              <div
+                className="small-movie-card__image"
+                onClick={[Function]}
+              >
+                <img
+                  alt="Macbeth"
+                  height="175"
+                  src="http://picsum.photos/id/1059/300/150"
+                  width="280"
+                />
+              </div>
+            </a>
+            <h3
+              className="small-movie-card__title"
+              onClick={[Function]}
+            >
+              <a
+                className="small-movie-card__link"
+                href="/dev-film"
+                onClick={[Function]}
+              >
+                Macbeth
+              </a>
+            </h3>
+          </article>
+        </div>
+        <div
+          className="catalog__more"
         >
-          Show more
-        </button>
+          <button
+            className="catalog__button"
+            onClick={[Function]}
+            type="button"
+          >
+            Show more
+          </button>
+        </div>
       </div>
     </section>
     <footer
