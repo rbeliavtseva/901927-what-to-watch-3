@@ -7,8 +7,8 @@ it(`Render Tabs`, () => {
     .create(
         <Tabs
           key={0}
-          onClick={() => {}}
-          activeIndex={0}
+          onActiveItem={() => {}}
+          activeItem={null}
         >
           <div>
             Child1

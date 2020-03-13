@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Tabs = ({children, activeIndex, onClick}) => {
+const Tabs = ({children, activeItem, onActiveItem}) => {
   const labels = [`Overview`, `Details`, `Reviews`];
 
-  const tabItems = children.map((_, index) => {
+  const tabItems = children.map((tab, index) => {
     return (
-      <li className={`movie-nav__item ${activeIndex === index ? `movie-nav__item--active` : ``}`} onClick={() => onClick(index)} key={index}>
+      <li className={`movie-nav__item ${(tab === activeItem) || (activeItem === null && index === 0) ? `movie-nav__item--active` : ``}`} onClick={() => onActiveItem(tab)} key={index}>
         <a href="#" className="movie-nav__link">{labels[index]}</a>
       </li>
     );
@@ -20,9 +20,9 @@ const Tabs = ({children, activeIndex, onClick}) => {
         </ul>
       </nav>
       <div>
-        {children.map((child, index) => {
+        {children.map((tab, index) => {
           return (
-            index !== activeIndex ? null : child.props.children
+            (tab === activeItem) || (activeItem === null && index === 0) ? tab.props.children : null
           );
         })}
       </div>
@@ -32,8 +32,8 @@ const Tabs = ({children, activeIndex, onClick}) => {
 
 Tabs.propTypes = {
   children: PropTypes.instanceOf(Array).isRequired,
-  activeIndex: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired
+  activeItem: PropTypes.any,
+  onActiveItem: PropTypes.func.isRequired
 };
 
 export default Tabs;

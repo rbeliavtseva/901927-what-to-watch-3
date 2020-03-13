@@ -1,21 +1,21 @@
 import React, {PureComponent} from 'react';
 import PropTypes from "prop-types";
 
-const withActiveIndex = (Component) => {
-  class WithActiveIndex extends PureComponent {
+const withActiveItem = (Component) => {
+  class WithActiveItem extends PureComponent {
     constructor(props) {
       super(props);
 
       this.state = {
-        activeIndex: 0
+        activeItem: null
       };
 
       this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(index) {
+    handleClick(item) {
       this.setState({
-        activeIndex: index
+        activeItem: item
       });
     }
 
@@ -23,19 +23,19 @@ const withActiveIndex = (Component) => {
       return (
         <Component
           {...this.props}
-          activeIndex={this.state.activeIndex}
-          onClick={this.handleClick}
+          activeItem={this.state.activeItem}
+          onActiveItem={this.handleClick}
         />
       );
     }
   }
 
-  WithActiveIndex.propTypes = {
-    activeIndex: PropTypes.number,
+  WithActiveItem.propTypes = {
+    activeItem: PropTypes.any,
     onClick: PropTypes.func
   };
 
-  return WithActiveIndex;
+  return WithActiveItem;
 };
 
-export default withActiveIndex;
+export default withActiveItem;

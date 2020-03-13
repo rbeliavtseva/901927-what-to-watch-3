@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import MoviesList from "../moviesList/moviesList.jsx";
 import GenresList from "../genresList/genresList.jsx";
-import withActiveIndex from "../../hocs/with-active-index/with-active-index.js";
+import withActiveItem from "../../hocs/with-active-item/with-active-item.js";
 import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer/reducer.js";
 import withLoadMore from "../../hocs/with-load-more/with-load-more.js";
 
-const GenresListWrapped = withActiveIndex(GenresList);
+const GenresListWrapped = withActiveItem(GenresList);
 
-const MoviesListWrapped = withLoadMore(MoviesList);
+const MoviesListWrapped = withActiveItem(withLoadMore(MoviesList));
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
