@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Tabs from "../tabs/tabs.jsx";
 import Review from "../review/review.jsx";
 import MoviesList from "../moviesList/moviesList.jsx";
-import withActiveIndex from "../../hocs/with-active-index/with-active-index.js";
+import withActiveItem from "../../hocs/with-active-item/with-active-item.js";
 
-const TabsWrapped = withActiveIndex(Tabs);
+const TabsWrapped = withActiveItem(Tabs);
 
 const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick}) => {
   if (movieFullInfo === null) {

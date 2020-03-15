@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const GenresList = ({activeIndex, onClick, onFilterButtonClick, genres}) => {
+const GenresList = ({activeItem, onActiveItem, onFilterButtonClick, genres}) => {
 
   const genreItems = genres.map((genre, index) => {
     return (
-      <li className={`catalog__genres-item ${activeIndex === index ? `catalog__genres-item--active` : ``}`}
+      <li className={`catalog__genres-item ${(activeItem === genre) || (activeItem === null && index === 0) ? `catalog__genres-item--active` : ``}`}
         onClick={() => {
-          onClick(index);
+          onActiveItem(genre);
           onFilterButtonClick(genres[index]);
         }}
         key={genre}>
@@ -24,8 +24,8 @@ const GenresList = ({activeIndex, onClick, onFilterButtonClick, genres}) => {
 };
 
 GenresList.propTypes = {
-  activeIndex: PropTypes.number,
-  onClick: PropTypes.func,
+  activeItem: PropTypes.any,
+  onActiveItem: PropTypes.func,
   onFilterButtonClick: PropTypes.func.isRequired,
   genres: PropTypes.array.isRequired
 };
