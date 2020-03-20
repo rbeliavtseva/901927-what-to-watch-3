@@ -6,31 +6,51 @@ class VideoPlayer extends PureComponent {
     super(props);
 
     this._videoRef = createRef();
+
+    this.videoPlay = this.videoPlay.bind(this);
+    this.videoPause = this.videoPause.bind(this);
+  }
+
+  videoPlay() {
+    const video = this._videoRef.current;
+    video.play();
+  }
+
+  videoPause() {
+    const video = this._videoRef.current;
+    video.pause();
   }
 
   componentDidMount() {
-    const video = this._videoRef.current;
-
-    video.play();
+    if (this.props.autoPlay) {
+      this.videoPlay();
+    }
   }
 
   render() {
     return (
-      <video width="auto" height="100%" muted poster={this.props.movie.poster} ref={this._videoRef}>
-        <source src={this.props.movie.preview} type="video/mp4"></source>
+      <video width="auto" height="100%"
+        className={this.props.className}
+        muted={this.props.muted}
+        poster={this.props.poster}
+        ref={this._videoRef}
+        onLoadedMetadata={this.props.videoReady ? () => this.props.videoReady() : null}
+        onTimeUpdate={this.props.videoBarUpdate ? () => this.props.videoBarUpdate() : null}>
+        <source src={this.props.videoSource} type="video/mp4"></source>
+        <source src={this.props.videoSource} type="video/webm"></source>
       </video>
     );
   }
 }
 
 VideoPlayer.propTypes = {
-  movie: PropTypes.exact({
-    title: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    preview: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired
-  }).isRequired,
+  poster: PropTypes.string.isRequired,
+  muted: PropTypes.bool.isRequired,
+  className: PropTypes.string,
+  autoPlay: PropTypes.bool,
+  videoReady: PropTypes.func,
+  videoBarUpdate: PropTypes.func,
+  videoSource: PropTypes.string.isRequired
 };
 
 export default VideoPlayer;

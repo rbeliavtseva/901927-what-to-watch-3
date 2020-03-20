@@ -12,7 +12,9 @@ const movie = {
   poster: `http://picsum.photos/id/1019/300/150`,
   id: 25,
   preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-  genre: `Triller`
+  genre: `Triller`,
+  year: 2015,
+  fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 const movieFullInfo = new Map([

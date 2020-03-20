@@ -9,8 +9,12 @@ import {reducer} from "../../reducer/reducer.js";
 // Mocks
 const movie = {
   title: `Fantastic Mr. Fox`,
+  poster: `http://picsum.photos/id/1018/1920/1080`,
+  id: 100,
+  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   genre: `Animation`,
-  year: 2009
+  year: 2009,
+  fullMovie: `https://www.videvo.net/videvo_files/converted/2013_08/preview/HarryTimer1.mov84033.webm`
 };
 
 const films = [

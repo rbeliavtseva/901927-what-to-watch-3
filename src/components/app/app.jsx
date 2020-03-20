@@ -3,26 +3,32 @@ import PropTypes from "prop-types";
 import Main from "../main/main.jsx";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import MoviePage from "../moviePage/moviePage.jsx";
+import withModalShow from "../../hocs/with-modal-show/with-modal-show.js";
+
+const MainWrapped = withModalShow(Main);
+
+const MoviePageWrapped = withModalShow(MoviePage);
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      movieInfo: null
+      movieInfo: null,
+      id: null
     };
 
     this.cardClickHandler = this.cardClickHandler.bind(this);
   }
 
   cardClickHandler(movieId) {
-    this.setState({movieInfo: this.props.filmsFullInfo.get(movieId)});
+    this.setState({movieInfo: this.props.filmsFullInfo.get(movieId), id: movieId});
   }
 
   _renderMain() {
     const {movie, films} = this.props;
     return (
-      <Main
+      <MainWrapped
         movie={movie}
         films={films}
         onMovieCardClick={this.cardClickHandler}
@@ -33,10 +39,11 @@ class App extends PureComponent {
   _renderMoviePage() {
     const {reviews, films} = this.props;
     return (
-      <MoviePage
+      <MoviePageWrapped
         movieFullInfo={this.state.movieInfo}
         reviews={reviews}
         films={films}
+        movieId={this.state.id}
         onMovieCardClick={this.cardClickHandler}
       />
     );

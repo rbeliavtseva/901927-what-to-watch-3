@@ -9,7 +9,9 @@ const movie = {
   poster: `http://picsum.photos/id/1005/300/150`,
   id: 110,
   preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-  genre: `Animation`
+  genre: `Animation`,
+  year: 2015,
+  fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
 };
 
 const movieFullInfo = {

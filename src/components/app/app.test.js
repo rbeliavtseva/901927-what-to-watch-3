@@ -8,8 +8,12 @@ import {reducer} from "../../reducer/reducer.js";
 // Mocks
 const movie = {
   title: `Fantastic Mr. Fox`,
+  poster: `http://picsum.photos/id/1018/1920/1080`,
+  id: 100,
+  preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   genre: `Animation`,
-  year: 2009
+  year: 2009,
+  fullMovie: `https://www.videvo.net/videvo_files/converted/2013_08/preview/HarryTimer1.mov84033.webm`
 };
 
 const films = [
@@ -19,6 +23,8 @@ const films = [
     id: 19,
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     genre: `Drama`,
+    year: 1999,
+    fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Pulp Fiction`,
@@ -26,6 +32,8 @@ const films = [
     id: 20,
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     genre: `Triller`,
+    year: 1990,
+    fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `The Godfather`,
@@ -33,6 +41,8 @@ const films = [
     id: 21,
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     genre: `Drama`,
+    year: 1975,
+    fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `Back to the Future`,
@@ -40,6 +50,8 @@ const films = [
     id: 22,
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     genre: `Science Fiction`,
+    year: 1988,
+    fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
   {
     title: `The Pianist`,
@@ -47,6 +59,8 @@ const films = [
     id: 23,
     preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     genre: `Drama`,
+    year: 2002,
+    fullMovie: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   }
 ];
 

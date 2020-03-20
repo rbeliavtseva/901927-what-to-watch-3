@@ -10,7 +10,7 @@ const MovieCard = ({movie, className, onMovieCardClick, isHovered, onMouseEnter,
       onMouseLeave={onMouseLeave}>
       <Link to="/dev-film">
         <div className="small-movie-card__image" onClick={() => onMovieCardClick(movie.id)}>
-          {isHovered ? <VideoPlayer movie={movie}/> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
+          {isHovered ? <VideoPlayer poster={movie.poster} videoSource={movie.preview} muted={true} autoPlay={true} /> : <img src={movie.poster} alt={movie.title} width="280" height="175"/>}
         </div>
       </Link>
 
@@ -27,7 +27,9 @@ MovieCard.propTypes = {
     poster: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     preview: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired
+    genre: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    fullMovie: PropTypes.string.isRequired
   }).isRequired,
   className: PropTypes.string,
   onMovieCardClick: PropTypes.func.isRequired,

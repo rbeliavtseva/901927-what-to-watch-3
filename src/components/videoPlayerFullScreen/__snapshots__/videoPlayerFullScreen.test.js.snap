@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render VideoPlayerFullScreen 1`] = `
+<div
+  className="player"
+  style={
+    Object {
+      "zIndex": 9999,
+    }
+  }
+>
+  <video
+    className="player__video"
+    height="100%"
+    muted={false}
+    onLoadedMetadata={[Function]}
+    onTimeUpdate={[Function]}
+    poster="http://picsum.photos/id/1020/300/150"
+    width="auto"
+  >
+    <source
+      src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+      type="video/webm"
+    />
+  </video>
+</div>
+`;
