@@ -13,8 +13,8 @@ exports[`Render VideoPlayerFullScreen 1`] = `
     className="player__video"
     height="100%"
     muted={false}
-    onLoadedMetadata={[Function]}
-    onTimeUpdate={[Function]}
+    onLoadedMetadata={null}
+    onTimeUpdate={null}
     poster="http://picsum.photos/id/1020/300/150"
     width="auto"
   >
