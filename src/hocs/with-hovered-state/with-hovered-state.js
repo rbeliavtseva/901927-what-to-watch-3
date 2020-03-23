@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, createRef} from 'react';
 import PropTypes from "prop-types";
 
 const VIDEO_DELAY = 1000;
@@ -7,6 +7,8 @@ const withHoveredState = (Component) => {
   class WithHoveredState extends PureComponent {
     constructor(props) {
       super(props);
+
+      this._timeoutRef = createRef();
 
       this.state = {
         hovering: false,
@@ -19,7 +21,7 @@ const withHoveredState = (Component) => {
 
     handleMouseEnter() {
       this.setState({hovering: true});
-      setTimeout(
+      this._timeoutRef = setTimeout(
           () => {
             if (this.state.hovering) {
               this.props.onMouseEnter();
@@ -30,8 +32,15 @@ const withHoveredState = (Component) => {
     }
 
     handleMouseLeave() {
+      clearTimeout(this._timeoutRef);
       this.setState({hovering: false, isHovered: false});
       this.props.onMouseLeave();
+    }
+
+    componentWillUnmount() {
+      if (this._timeoutRef) {
+        clearTimeout(this._timeoutRef);
+      }
     }
 
     render() {
