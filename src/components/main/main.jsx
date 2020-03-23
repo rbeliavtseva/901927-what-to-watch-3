@@ -7,17 +7,20 @@ import {connect} from "react-redux";
 import {ActionCreator} from "../../reducer/reducer.js";
 import withLoadMore from "../../hocs/with-load-more/with-load-more.js";
 import VideoPlayerFullScreen from "../videoPlayerFullScreen/videoPlayerFullScreen.jsx";
+import withFullScreenVideo from "../../hocs/with-full-screen-video/with-full-screen-video.js";
 
 const GenresListWrapped = withActiveItem(GenresList);
 
 const MoviesListWrapped = withActiveItem(withLoadMore(MoviesList));
+
+const VideoPlayerFullScreenWrapped = withFullScreenVideo(VideoPlayerFullScreen);
 
 const Main = (props) => {
   const {title, genre, year} = props.movie;
 
   return (
     <React.Fragment>
-      {props.modalShow && <VideoPlayerFullScreen onFullScreenClose={props.onModalShow} movie={props.movie}/>}
+      {props.modalShow && <VideoPlayerFullScreenWrapped onFullScreenClose={props.onModalShow} movie={props.movie}/>}
       <div>
         <div className="visually-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
