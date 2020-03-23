@@ -17,7 +17,7 @@ const Main = (props) => {
 
   return (
     <React.Fragment>
-      {props.modalShow ? <VideoPlayerFullScreen onFullScreenClose={props.onModalShow} movie={props.movie}/> : null}
+      {props.modalShow && <VideoPlayerFullScreen onFullScreenClose={props.onModalShow} movie={props.movie}/>}
       <div>
         <div className="visually-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

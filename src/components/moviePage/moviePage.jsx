@@ -33,7 +33,7 @@ const MoviePage = ({movieFullInfo, reviews, films, onMovieCardClick, onModalShow
 
   return (
     <React.Fragment>
-      {modalShow ? <VideoPlayerFullScreen onFullScreenClose={onModalShow} movie={films.filter((film) => film.id === movieId)[0]}/> : null}
+      {modalShow ? <VideoPlayerFullScreen onFullScreenClose={onModalShow} movie={films.find((film) => film.id === movieId)}/> : null}
       <div>
         <section className="movie-card movie-card--full">
           <div className="movie-card__hero">

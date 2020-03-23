@@ -28,16 +28,17 @@ class VideoPlayer extends PureComponent {
   }
 
   render() {
+    const {className, muted, poster, videoReady, videoBarUpdate, videoSource} = this.props;
     return (
       <video width="auto" height="100%"
-        className={this.props.className}
-        muted={this.props.muted}
-        poster={this.props.poster}
+        className={className}
+        muted={muted}
+        poster={poster}
         ref={this._videoRef}
-        onLoadedMetadata={this.props.videoReady ? () => this.props.videoReady() : null}
-        onTimeUpdate={this.props.videoBarUpdate ? () => this.props.videoBarUpdate() : null}>
-        <source src={this.props.videoSource} type="video/mp4"></source>
-        <source src={this.props.videoSource} type="video/webm"></source>
+        onLoadedMetadata={videoReady ? () => videoReady() : null}
+        onTimeUpdate={videoBarUpdate ? () => videoBarUpdate() : null}>
+        <source src={videoSource} type="video/mp4"></source>
+        <source src={videoSource} type="video/webm"></source>
       </video>
     );
   }
