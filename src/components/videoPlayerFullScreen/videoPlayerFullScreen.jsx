@@ -1,7 +1,8 @@
 import React, {createRef} from "react";
 import PropTypes from "prop-types";
 import VideoPlayer from "../videoPlayer/videoPlayer.jsx";
-import Moment from 'react-moment';
+
+import {fullScreenVideoTimeDurationFormat} from '../../utils.js';
 
 class VideoPlayerFullScreen extends React.PureComponent {
   constructor(props) {
@@ -80,9 +81,7 @@ class VideoPlayerFullScreen extends React.PureComponent {
                 <div className="player__toggler" style={{left: 30 + `%`}} ref={this._playToggler}>Toggler</div>
               </div>
               <div className="player__time-value">
-                <Moment format="HH:mm:ss" parse='ss'>
-                  {this._videoPlayer.current._videoRef.current.duration}
-                </Moment>
+                {fullScreenVideoTimeDurationFormat(this._videoPlayer.current._videoRef.current.duration)}
               </div>
             </div>
 
